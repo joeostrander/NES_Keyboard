@@ -1,0 +1,1188 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"57 Source/Usb.h
+[; ;Source/Usb.h: 57: {
+[s S306 `uc 1 `*uc 1 ]
+[n S306 _BufferInfo Size Buffer ]
+"77 Source/UsbDescriptors.h
+[; ;Source/UsbDescriptors.h: 77: {
+[s S307 `uc -> 9 `i `uc -> 32 `i ]
+[n S307 _configStruct configHeader HIDDescriptor ]
+"178
+[; ;Source/UsbDescriptors.h: 178: const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[1];}StringDescriptor0={sizeof(StringDescriptor0),0x03,{0x0409}};
+[s S308 `uc 1 `uc 1 `us -> -> 1 `i `ux ]
+[n S308 . bLength bDscType string ]
+"180
+[; ;Source/UsbDescriptors.h: 180: const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[11];}StringDescriptor1={sizeof(StringDescriptor1),0x03,
+[s S309 `uc 1 `uc 1 `us -> 11 `i ]
+[n S309 . bLength bDscType string ]
+"183
+[; ;Source/UsbDescriptors.h: 183: const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[20];}StringDescriptor2={sizeof(StringDescriptor2),0x03,
+[s S310 `uc 1 `uc 1 `us -> 20 `i ]
+[n S310 . bLength bDscType string ]
+"16 Source/nes_keyboard.h
+[; ;Source/nes_keyboard.h: 16: {
+[s S311 `uc 1 `us 1 ]
+[n S311 KEYMAP button key ]
+[t ~ __interrupt . k ]
+[t T1 __interrupt ]
+"587 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 587:     struct {
+[s S40 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S40 . . ACTIF USBIF BCL1IF . C1IF C2IF OSFIF ]
+"586
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 586: typedef union {
+[u S39 `S40 1 ]
+[n S39 . . ]
+"598
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 598: extern volatile PIR2bits_t PIR2bits __attribute__((address(0x012)));
+[v _PIR2bits `VS39 ~T0 @X0 0 e@18 ]
+"72 Source/Usb.h
+[; ;Source/Usb.h: 72: void ProcessUSBTransactions(void);
+[v _ProcessUSBTransactions `(v ~T0 @X0 0 ef ]
+"2387 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2387: extern volatile unsigned char ANSELA __attribute__((address(0x18C)));
+[v _ANSELA `Vuc ~T0 @X0 0 e@396 ]
+"2416
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2416: extern volatile unsigned char ANSELC __attribute__((address(0x18E)));
+[v _ANSELC `Vuc ~T0 @X0 0 e@398 ]
+"1338
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 1338: extern volatile unsigned char OSCTUNE __attribute__((address(0x098)));
+[v _OSCTUNE `Vuc ~T0 @X0 0 e@152 ]
+"1402
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 1402: extern volatile unsigned char OSCCON __attribute__((address(0x099)));
+[v _OSCCON `Vuc ~T0 @X0 0 e@153 ]
+"3928
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 3928: extern volatile unsigned char ACTCON __attribute__((address(0x39B)));
+[v _ACTCON `Vuc ~T0 @X0 0 e@923 ]
+"1139
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 1139: extern volatile unsigned char OPTION_REG __attribute__((address(0x095)));
+[v _OPTION_REG `Vuc ~T0 @X0 0 e@149 ]
+"1791
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 1791: extern volatile unsigned char LATC __attribute__((address(0x10E)));
+[v _LATC `Vuc ~T0 @X0 0 e@270 ]
+"4852
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4852: extern volatile unsigned char UIE __attribute__((address(0xE92)));
+[v _UIE `Vuc ~T0 @X0 0 e@3730 ]
+"357
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 357:     struct {
+[s S31 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S31 . IOCIF INTF TMR0IF IOCIE INTE TMR0IE PEIE GIE ]
+"367
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 367:     struct {
+[s S32 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S32 . . T0IF . T0IE ]
+"356
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 356: typedef union {
+[u S30 `S31 1 `S32 1 ]
+[n S30 . . . ]
+"374
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 374: extern volatile INTCONbits_t INTCONbits __attribute__((address(0x00B)));
+[v _INTCONbits `VS30 ~T0 @X0 0 e@11 ]
+"1093
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 1093:     struct {
+[s S67 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S67 . . ACTIE USBIE BCL1IE . C1IE C2IE OSFIE ]
+"1092
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 1092: typedef union {
+[u S66 `S67 1 ]
+[n S66 . . ]
+"1104
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 1104: extern volatile PIE2bits_t PIE2bits __attribute__((address(0x092)));
+[v _PIE2bits `VS66 ~T0 @X0 0 e@146 ]
+"435
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 435:     struct {
+[s S34 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S34 . RA0 RA1 . RA3 RA4 RA5 ]
+"434
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 434: typedef union {
+[u S33 `S34 1 ]
+[n S33 . . ]
+"444
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 444: extern volatile PORTAbits_t PORTAbits __attribute__((address(0x00C)));
+[v _PORTAbits `VS33 ~T0 @X0 0 e@12 ]
+"74 Source/Usb.h
+[; ;Source/Usb.h: 74: uint8_t IsUsbDataAvaialble(uint8_t InterfaceNo);
+[v _IsUsbDataAvaialble `(uc ~T0 @X0 0 ef1`uc ]
+"73
+[; ;Source/Usb.h: 73: void ReArmInterface(uint8_t InterfaceNo);
+[v _ReArmInterface `(v ~T0 @X0 0 ef1`uc ]
+"4637 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4637:     struct {
+[s S247 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S247 . . SUSPND RESUME USBEN PKTDIS SE0 PPBRST ]
+"4636
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4636: typedef union {
+[u S246 `S247 1 ]
+[n S246 . . ]
+"4647
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4647: extern volatile UCONbits_t UCONbits __attribute__((address(0xE8E)));
+[v _UCONbits `VS246 ~T0 @X0 0 e@3726 ]
+"36 Source/nes_keyboard.h
+[; ;Source/nes_keyboard.h: 36: uint8_t NES_read_pad();
+[v _NES_read_pad `(uc ~T0 @X0 0 e? ]
+"71 Source/Usb.h
+[; ;Source/Usb.h: 71: void HIDSend(uint8_t InterfaceNo);
+[v _HIDSend `(v ~T0 @X0 0 ef1`uc ]
+[p mainexit ]
+"35 Source/nes_keyboard.h
+[; ;Source/nes_keyboard.h: 35: void NES_GPIO_Initialize();
+[v _NES_GPIO_Initialize `(v ~T0 @X0 0 e? ]
+"69 Source/Usb.h
+[; ;Source/Usb.h: 69: void InitializeUSB(void);
+[v _InitializeUSB `(v ~T0 @X0 0 ef ]
+"70
+[; ;Source/Usb.h: 70: void EnableUSBModule(void);
+[v _EnableUSBModule `(v ~T0 @X0 0 ef ]
+"54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 54: __asm("INDF0 equ 00h");
+[; <" INDF0 equ 00h ;# ">
+"74
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 74: __asm("INDF1 equ 01h");
+[; <" INDF1 equ 01h ;# ">
+"94
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 94: __asm("PCL equ 02h");
+[; <" PCL equ 02h ;# ">
+"114
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 114: __asm("STATUS equ 03h");
+[; <" STATUS equ 03h ;# ">
+"177
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 177: __asm("FSR0L equ 04h");
+[; <" FSR0L equ 04h ;# ">
+"197
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 197: __asm("FSR0H equ 05h");
+[; <" FSR0H equ 05h ;# ">
+"221
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 221: __asm("FSR1L equ 06h");
+[; <" FSR1L equ 06h ;# ">
+"241
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 241: __asm("FSR1H equ 07h");
+[; <" FSR1H equ 07h ;# ">
+"261
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 261: __asm("BSR equ 08h");
+[; <" BSR equ 08h ;# ">
+"313
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 313: __asm("WREG equ 09h");
+[; <" WREG equ 09h ;# ">
+"333
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 333: __asm("PCLATH equ 0Ah");
+[; <" PCLATH equ 0Ah ;# ">
+"353
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 353: __asm("INTCON equ 0Bh");
+[; <" INTCON equ 0Bh ;# ">
+"431
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 431: __asm("PORTA equ 0Ch");
+[; <" PORTA equ 0Ch ;# ">
+"476
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 476: __asm("PORTC equ 0Eh");
+[; <" PORTC equ 0Eh ;# ">
+"526
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 526: __asm("PIR1 equ 011h");
+[; <" PIR1 equ 011h ;# ">
+"583
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 583: __asm("PIR2 equ 012h");
+[; <" PIR2 equ 012h ;# ">
+"635
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 635: __asm("TMR0 equ 015h");
+[; <" TMR0 equ 015h ;# ">
+"655
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 655: __asm("TMR1 equ 016h");
+[; <" TMR1 equ 016h ;# ">
+"662
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 662: __asm("TMR1L equ 016h");
+[; <" TMR1L equ 016h ;# ">
+"682
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 682: __asm("TMR1H equ 017h");
+[; <" TMR1H equ 017h ;# ">
+"702
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 702: __asm("T1CON equ 018h");
+[; <" T1CON equ 018h ;# ">
+"774
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 774: __asm("T1GCON equ 019h");
+[; <" T1GCON equ 019h ;# ">
+"844
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 844: __asm("TMR2 equ 01Ah");
+[; <" TMR2 equ 01Ah ;# ">
+"864
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 864: __asm("PR2 equ 01Bh");
+[; <" PR2 equ 01Bh ;# ">
+"884
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 884: __asm("T2CON equ 01Ch");
+[; <" T2CON equ 01Ch ;# ">
+"955
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 955: __asm("TRISA equ 08Ch");
+[; <" TRISA equ 08Ch ;# ">
+"982
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 982: __asm("TRISC equ 08Eh");
+[; <" TRISC equ 08Eh ;# ">
+"1032
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 1032: __asm("PIE1 equ 091h");
+[; <" PIE1 equ 091h ;# ">
+"1089
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 1089: __asm("PIE2 equ 092h");
+[; <" PIE2 equ 092h ;# ">
+"1141
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 1141: __asm("OPTION_REG equ 095h");
+[; <" OPTION_REG equ 095h ;# ">
+"1224
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 1224: __asm("PCON equ 096h");
+[; <" PCON equ 096h ;# ">
+"1281
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 1281: __asm("WDTCON equ 097h");
+[; <" WDTCON equ 097h ;# ">
+"1340
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 1340: __asm("OSCTUNE equ 098h");
+[; <" OSCTUNE equ 098h ;# ">
+"1404
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 1404: __asm("OSCCON equ 099h");
+[; <" OSCCON equ 099h ;# ">
+"1480
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 1480: __asm("OSCSTAT equ 09Ah");
+[; <" OSCSTAT equ 09Ah ;# ">
+"1531
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 1531: __asm("ADRES equ 09Bh");
+[; <" ADRES equ 09Bh ;# ">
+"1538
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 1538: __asm("ADRESL equ 09Bh");
+[; <" ADRESL equ 09Bh ;# ">
+"1558
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 1558: __asm("ADRESH equ 09Ch");
+[; <" ADRESH equ 09Ch ;# ">
+"1578
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 1578: __asm("ADCON0 equ 09Dh");
+[; <" ADCON0 equ 09Dh ;# ">
+"1658
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 1658: __asm("ADCON1 equ 09Eh");
+[; <" ADCON1 equ 09Eh ;# ">
+"1724
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 1724: __asm("ADCON2 equ 09Fh");
+[; <" ADCON2 equ 09Fh ;# ">
+"1766
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 1766: __asm("LATA equ 010Ch");
+[; <" LATA equ 010Ch ;# ">
+"1793
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 1793: __asm("LATC equ 010Eh");
+[; <" LATC equ 010Eh ;# ">
+"1843
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 1843: __asm("CM1CON0 equ 0111h");
+[; <" CM1CON0 equ 0111h ;# ">
+"1900
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 1900: __asm("CM1CON1 equ 0112h");
+[; <" CM1CON1 equ 0112h ;# ">
+"1972
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 1972: __asm("CM2CON0 equ 0113h");
+[; <" CM2CON0 equ 0113h ;# ">
+"2029
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2029: __asm("CM2CON1 equ 0114h");
+[; <" CM2CON1 equ 0114h ;# ">
+"2101
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2101: __asm("CMOUT equ 0115h");
+[; <" CMOUT equ 0115h ;# ">
+"2127
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2127: __asm("BORCON equ 0116h");
+[; <" BORCON equ 0116h ;# ">
+"2160
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2160: __asm("FVRCON equ 0117h");
+[; <" FVRCON equ 0117h ;# ">
+"2236
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2236: __asm("DACCON0 equ 0118h");
+[; <" DACCON0 equ 0118h ;# ">
+"2291
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2291: __asm("DACCON1 equ 0119h");
+[; <" DACCON1 equ 0119h ;# ">
+"2343
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2343: __asm("APFCON equ 011Dh");
+[; <" APFCON equ 011Dh ;# ">
+"2389
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2389: __asm("ANSELA equ 018Ch");
+[; <" ANSELA equ 018Ch ;# ">
+"2418
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2418: __asm("ANSELC equ 018Eh");
+[; <" ANSELC equ 018Eh ;# ">
+"2464
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2464: __asm("PMADR equ 0191h");
+[; <" PMADR equ 0191h ;# ">
+"2471
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2471: __asm("PMADRL equ 0191h");
+[; <" PMADRL equ 0191h ;# ">
+"2491
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2491: __asm("PMADRH equ 0192h");
+[; <" PMADRH equ 0192h ;# ">
+"2511
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2511: __asm("PMDAT equ 0193h");
+[; <" PMDAT equ 0193h ;# ">
+"2518
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2518: __asm("PMDATL equ 0193h");
+[; <" PMDATL equ 0193h ;# ">
+"2538
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2538: __asm("PMDATH equ 0194h");
+[; <" PMDATH equ 0194h ;# ">
+"2558
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2558: __asm("PMCON1 equ 0195h");
+[; <" PMCON1 equ 0195h ;# ">
+"2614
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2614: __asm("PMCON2 equ 0196h");
+[; <" PMCON2 equ 0196h ;# ">
+"2634
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2634: __asm("VREGCON equ 0197h");
+[; <" VREGCON equ 0197h ;# ">
+"2668
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2668: __asm("RCREG equ 0199h");
+[; <" RCREG equ 0199h ;# ">
+"2688
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2688: __asm("TXREG equ 019Ah");
+[; <" TXREG equ 019Ah ;# ">
+"2708
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2708: __asm("SPBRG equ 019Bh");
+[; <" SPBRG equ 019Bh ;# ">
+"2715
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2715: __asm("SPBRGL equ 019Bh");
+[; <" SPBRGL equ 019Bh ;# ">
+"2735
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2735: __asm("SPBRGH equ 019Ch");
+[; <" SPBRGH equ 019Ch ;# ">
+"2755
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2755: __asm("RCSTA equ 019Dh");
+[; <" RCSTA equ 019Dh ;# ">
+"2817
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2817: __asm("TXSTA equ 019Eh");
+[; <" TXSTA equ 019Eh ;# ">
+"2879
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2879: __asm("BAUDCON equ 019Fh");
+[; <" BAUDCON equ 019Fh ;# ">
+"2931
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2931: __asm("WPUA equ 020Ch");
+[; <" WPUA equ 020Ch ;# ">
+"2972
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2972: __asm("SSP1BUF equ 0211h");
+[; <" SSP1BUF equ 0211h ;# ">
+"2977
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2977: __asm("SSPBUF equ 0211h");
+[; <" SSPBUF equ 0211h ;# ">
+"3010
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 3010: __asm("SSP1ADD equ 0212h");
+[; <" SSP1ADD equ 0212h ;# ">
+"3015
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 3015: __asm("SSPADD equ 0212h");
+[; <" SSPADD equ 0212h ;# ">
+"3048
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 3048: __asm("SSP1MSK equ 0213h");
+[; <" SSP1MSK equ 0213h ;# ">
+"3053
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 3053: __asm("SSPMSK equ 0213h");
+[; <" SSPMSK equ 0213h ;# ">
+"3086
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 3086: __asm("SSP1STAT equ 0214h");
+[; <" SSP1STAT equ 0214h ;# ">
+"3091
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 3091: __asm("SSPSTAT equ 0214h");
+[; <" SSPSTAT equ 0214h ;# ">
+"3208
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 3208: __asm("SSP1CON1 equ 0215h");
+[; <" SSP1CON1 equ 0215h ;# ">
+"3213
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 3213: __asm("SSPCON equ 0215h");
+[; <" SSPCON equ 0215h ;# ">
+"3217
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 3217: __asm("SSPCON1 equ 0215h");
+[; <" SSPCON1 equ 0215h ;# ">
+"3451
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 3451: __asm("SSP1CON2 equ 0216h");
+[; <" SSP1CON2 equ 0216h ;# ">
+"3456
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 3456: __asm("SSPCON2 equ 0216h");
+[; <" SSPCON2 equ 0216h ;# ">
+"3573
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 3573: __asm("SSP1CON3 equ 0217h");
+[; <" SSP1CON3 equ 0217h ;# ">
+"3578
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 3578: __asm("SSPCON3 equ 0217h");
+[; <" SSPCON3 equ 0217h ;# ">
+"3695
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 3695: __asm("IOCAP equ 0391h");
+[; <" IOCAP equ 0391h ;# ">
+"3748
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 3748: __asm("IOCAN equ 0392h");
+[; <" IOCAN equ 0392h ;# ">
+"3801
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 3801: __asm("IOCAF equ 0393h");
+[; <" IOCAF equ 0393h ;# ">
+"3854
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 3854: __asm("CLKRCON equ 039Ah");
+[; <" CLKRCON equ 039Ah ;# ">
+"3930
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 3930: __asm("ACTCON equ 039Bh");
+[; <" ACTCON equ 039Bh ;# ">
+"3977
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 3977: __asm("PWM1DCL equ 0611h");
+[; <" PWM1DCL equ 0611h ;# ">
+"4013
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4013: __asm("PWM1DCH equ 0612h");
+[; <" PWM1DCH equ 0612h ;# ">
+"4083
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4083: __asm("PWM1CON equ 0613h");
+[; <" PWM1CON equ 0613h ;# ">
+"4088
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4088: __asm("PWM1CON0 equ 0613h");
+[; <" PWM1CON0 equ 0613h ;# ">
+"4159
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4159: __asm("PWM2DCL equ 0614h");
+[; <" PWM2DCL equ 0614h ;# ">
+"4195
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4195: __asm("PWM2DCH equ 0615h");
+[; <" PWM2DCH equ 0615h ;# ">
+"4265
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4265: __asm("PWM2CON equ 0616h");
+[; <" PWM2CON equ 0616h ;# ">
+"4270
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4270: __asm("PWM2CON0 equ 0616h");
+[; <" PWM2CON0 equ 0616h ;# ">
+"4341
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4341: __asm("CWG1DBR equ 0691h");
+[; <" CWG1DBR equ 0691h ;# ">
+"4399
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4399: __asm("CWG1DBF equ 0692h");
+[; <" CWG1DBF equ 0692h ;# ">
+"4457
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4457: __asm("CWG1CON0 equ 0693h");
+[; <" CWG1CON0 equ 0693h ;# ">
+"4516
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4516: __asm("CWG1CON1 equ 0694h");
+[; <" CWG1CON1 equ 0694h ;# ">
+"4587
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4587: __asm("CWG1CON2 equ 0695h");
+[; <" CWG1CON2 equ 0695h ;# ">
+"4633
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4633: __asm("UCON equ 0E8Eh");
+[; <" UCON equ 0E8Eh ;# ">
+"4684
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4684: __asm("USTAT equ 0E8Fh");
+[; <" USTAT equ 0E8Fh ;# ">
+"4744
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4744: __asm("UIR equ 0E90h");
+[; <" UIR equ 0E90h ;# ">
+"4800
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4800: __asm("UCFG equ 0E91h");
+[; <" UCFG equ 0E91h ;# ">
+"4854
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4854: __asm("UIE equ 0E92h");
+[; <" UIE equ 0E92h ;# ">
+"4910
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4910: __asm("UEIR equ 0E93h");
+[; <" UEIR equ 0E93h ;# ">
+"4961
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4961: __asm("UFRM equ 0E94h");
+[; <" UFRM equ 0E94h ;# ">
+"4968
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4968: __asm("UFRMH equ 0E94h");
+[; <" UFRMH equ 0E94h ;# ">
+"5000
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 5000: __asm("UFRML equ 0E95h");
+[; <" UFRML equ 0E95h ;# ">
+"5062
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 5062: __asm("UADDR equ 0E96h");
+[; <" UADDR equ 0E96h ;# ">
+"5118
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 5118: __asm("UEIE equ 0E97h");
+[; <" UEIE equ 0E97h ;# ">
+"5169
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 5169: __asm("UEP0 equ 0E98h");
+[; <" UEP0 equ 0E98h ;# ">
+"5213
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 5213: __asm("UEP1 equ 0E99h");
+[; <" UEP1 equ 0E99h ;# ">
+"5257
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 5257: __asm("UEP2 equ 0E9Ah");
+[; <" UEP2 equ 0E9Ah ;# ">
+"5301
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 5301: __asm("UEP3 equ 0E9Bh");
+[; <" UEP3 equ 0E9Bh ;# ">
+"5345
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 5345: __asm("UEP4 equ 0E9Ch");
+[; <" UEP4 equ 0E9Ch ;# ">
+"5389
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 5389: __asm("UEP5 equ 0E9Dh");
+[; <" UEP5 equ 0E9Dh ;# ">
+"5433
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 5433: __asm("UEP6 equ 0E9Eh");
+[; <" UEP6 equ 0E9Eh ;# ">
+"5477
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 5477: __asm("UEP7 equ 0E9Fh");
+[; <" UEP7 equ 0E9Fh ;# ">
+"5521
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 5521: __asm("STATUS_SHAD equ 0FE4h");
+[; <" STATUS_SHAD equ 0FE4h ;# ">
+"5553
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 5553: __asm("WREG_SHAD equ 0FE5h");
+[; <" WREG_SHAD equ 0FE5h ;# ">
+"5573
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 5573: __asm("BSR_SHAD equ 0FE6h");
+[; <" BSR_SHAD equ 0FE6h ;# ">
+"5593
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 5593: __asm("PCLATH_SHAD equ 0FE7h");
+[; <" PCLATH_SHAD equ 0FE7h ;# ">
+"5613
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 5613: __asm("FSR0L_SHAD equ 0FE8h");
+[; <" FSR0L_SHAD equ 0FE8h ;# ">
+"5633
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 5633: __asm("FSR0H_SHAD equ 0FE9h");
+[; <" FSR0H_SHAD equ 0FE9h ;# ">
+"5653
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 5653: __asm("FSR1L_SHAD equ 0FEAh");
+[; <" FSR1L_SHAD equ 0FEAh ;# ">
+"5673
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 5673: __asm("FSR1H_SHAD equ 0FEBh");
+[; <" FSR1H_SHAD equ 0FEBh ;# ">
+"5693
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 5693: __asm("STKPTR equ 0FEDh");
+[; <" STKPTR equ 0FEDh ;# ">
+"5713
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 5713: __asm("TOSL equ 0FEEh");
+[; <" TOSL equ 0FEEh ;# ">
+"5733
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 5733: __asm("TOSH equ 0FEFh");
+[; <" TOSH equ 0FEFh ;# ">
+"38 Source/UsbDescriptors.h
+[; ;Source/UsbDescriptors.h: 38: volatile uint8_t HIDRxBuffer[0x08];
+[v _HIDRxBuffer `Vuc ~T0 @X0 -> 8 `i e ]
+"39
+[; ;Source/UsbDescriptors.h: 39: volatile uint8_t HIDTxBuffer[0x08];
+[v _HIDTxBuffer `Vuc ~T0 @X0 -> 8 `i e ]
+"41
+[; ;Source/UsbDescriptors.h: 41: BufferInfo Buffers[(0x01 * 2)] =
+[v _Buffers `S306 ~T0 @X0 -> 2 `i e ]
+[i _Buffers
+:U ..
+:U ..
+-> -> 8 `i `uc
+-> &U _HIDTxBuffer `*uc
+..
+:U ..
+-> -> 8 `i `uc
+-> &U _HIDRxBuffer `*uc
+..
+..
+]
+"52
+[; ;Source/UsbDescriptors.h: 52: const uint8_t DeviceDescriptor[]=
+[v _DeviceDescriptor `Cuc ~T0 @X0 -> 18 `i e ]
+[i _DeviceDescriptor
+:U ..
+-> -> 18 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 2 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 8 `i `uc
+-> & -> 1240 `i -> 255 `i `uc
+-> >> & -> -> 1240 `i `ui -> 65280 `ui -> 8 `i `uc
+-> & -> 422 `i -> 255 `i `uc
+-> >> & -> -> 422 `i `ui -> 65280 `ui -> 8 `i `uc
+-> & -> 1 `i -> 255 `i `uc
+-> >> & -> -> 1 `i `ui -> 65280 `ui -> 8 `i `uc
+-> -> 1 `i `uc
+-> -> 2 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+]
+"83
+[; ;Source/UsbDescriptors.h: 83: const ConfigStruct ConfigurationDescriptor =
+[v _ConfigurationDescriptor `CS307 ~T0 @X0 1 e ]
+[i _ConfigurationDescriptor
+:U ..
+:U ..
+:U ..
+-> -> 9 `i `uc
+-> -> 2 `i `uc
+-> -> 41 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 160 `i `uc
+-> -> 50 `i `uc
+..
+:U ..
+-> -> 9 `i `uc
+-> -> 4 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 2 `i `uc
+-> -> 3 `i `uc
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 9 `i `uc
+-> -> 33 `i `uc
+-> -> 17 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 34 `i `uc
+-> -> 63 `i `uc
+-> -> 0 `i `uc
+-> -> 7 `i `uc
+-> -> 5 `i `uc
+-> -> 129 `i `uc
+-> -> 3 `i `uc
+-> -> 8 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 7 `i `uc
+-> -> 5 `i `uc
+-> -> 1 `i `uc
+-> -> 3 `i `uc
+-> -> 8 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+..
+..
+]
+"142
+[; ;Source/UsbDescriptors.h: 142: const uint8_t HIDReport[] = {
+[v _HIDReport `Cuc ~T0 @X0 -> 63 `i e ]
+[i _HIDReport
+:U ..
+-> -> 5 `i `uc
+-> -> 1 `i `uc
+-> -> 9 `i `uc
+-> -> 6 `i `uc
+-> -> 161 `i `uc
+-> -> 1 `i `uc
+-> -> 5 `i `uc
+-> -> 7 `i `uc
+-> -> 25 `i `uc
+-> -> 224 `i `uc
+-> -> 41 `i `uc
+-> -> 231 `i `uc
+-> -> 21 `i `uc
+-> -> 0 `i `uc
+-> -> 37 `i `uc
+-> -> 1 `i `uc
+-> -> 117 `i `uc
+-> -> 1 `i `uc
+-> -> 149 `i `uc
+-> -> 8 `i `uc
+-> -> 129 `i `uc
+-> -> 2 `i `uc
+-> -> 149 `i `uc
+-> -> 1 `i `uc
+-> -> 117 `i `uc
+-> -> 8 `i `uc
+-> -> 129 `i `uc
+-> -> 3 `i `uc
+-> -> 149 `i `uc
+-> -> 5 `i `uc
+-> -> 117 `i `uc
+-> -> 1 `i `uc
+-> -> 5 `i `uc
+-> -> 8 `i `uc
+-> -> 25 `i `uc
+-> -> 1 `i `uc
+-> -> 41 `i `uc
+-> -> 5 `i `uc
+-> -> 145 `i `uc
+-> -> 2 `i `uc
+-> -> 149 `i `uc
+-> -> 1 `i `uc
+-> -> 117 `i `uc
+-> -> 3 `i `uc
+-> -> 145 `i `uc
+-> -> 3 `i `uc
+-> -> 149 `i `uc
+-> -> 6 `i `uc
+-> -> 117 `i `uc
+-> -> 8 `i `uc
+-> -> 21 `i `uc
+-> -> 0 `i `uc
+-> -> 37 `i `uc
+-> -> 101 `i `uc
+-> -> 5 `i `uc
+-> -> 7 `i `uc
+-> -> 25 `i `uc
+-> -> 0 `i `uc
+-> -> 41 `i `uc
+-> -> 101 `i `uc
+-> -> 129 `i `uc
+-> -> 0 `i `uc
+-> -> 192 `i `uc
+..
+]
+"178
+[; ;Source/UsbDescriptors.h: 178: const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[1];}StringDescriptor0={sizeof(StringDescriptor0),0x03,{0x0409}};
+[v _StringDescriptor0 `CS308 ~T0 @X0 1 e ]
+[i _StringDescriptor0
+:U ..
+:U ..
+-> -> # _StringDescriptor0 `ui `uc
+-> -> 3 `i `uc
+:U ..
+-> -> 1033 `i `us
+..
+..
+..
+]
+"180
+[; ;Source/UsbDescriptors.h: 180: const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[11];}StringDescriptor1={sizeof(StringDescriptor1),0x03,
+[v _StringDescriptor1 `CS309 ~T0 @X0 1 e ]
+[i _StringDescriptor1
+:U ..
+:U ..
+-> -> # _StringDescriptor1 `ui `uc
+-> -> 3 `i `uc
+:U ..
+-> -> 68 `ui `us
+-> -> 73 `ui `us
+-> -> 89 `ui `us
+-> -> 32 `ui `us
+-> -> 68 `ui `us
+-> -> 101 `ui `us
+-> -> 118 `ui `us
+-> -> 105 `ui `us
+-> -> 99 `ui `us
+-> -> 101 `ui `us
+-> -> 115 `ui `us
+..
+..
+..
+]
+"183
+[; ;Source/UsbDescriptors.h: 183: const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[20];}StringDescriptor2={sizeof(StringDescriptor2),0x03,
+[v _StringDescriptor2 `CS310 ~T0 @X0 1 e ]
+[i _StringDescriptor2
+:U ..
+:U ..
+-> -> # _StringDescriptor2 `ui `uc
+-> -> 3 `i `uc
+:U ..
+-> -> 49 `ui `us
+-> -> 54 `ui `us
+-> -> 70 `ui `us
+-> -> 49 `ui `us
+-> -> 52 `ui `us
+-> -> 53 `ui `us
+-> -> 53 `ui `us
+-> -> 32 `ui `us
+-> -> 72 `ui `us
+-> -> 73 `ui `us
+-> -> 68 `ui `us
+-> -> 32 `ui `us
+-> -> 75 `ui `us
+-> -> 101 `ui `us
+-> -> 121 `ui `us
+-> -> 98 `ui `us
+-> -> 111 `ui `us
+-> -> 97 `ui `us
+-> -> 114 `ui `us
+-> -> 100 `ui `us
+..
+..
+..
+]
+[v F2215 `*Cuc ~T0 @X0 1 t ]
+"187
+[; ;Source/UsbDescriptors.h: 187: const uint8_t *const StringDescriptorPointers[0x03]=
+[v _StringDescriptorPointers `C*Cuc ~T0 @X0 -> 3 `i e ]
+[i _StringDescriptorPointers
+:U ..
+-> &U _StringDescriptor0 `*Cuc
+-> &U _StringDescriptor1 `*Cuc
+-> &U _StringDescriptor2 `*Cuc
+..
+]
+"66 Source/Usb.h
+[; ;Source/Usb.h: 66: uint8_t DeviceState;
+[v _DeviceState `uc ~T0 @X0 1 e ]
+"21 Source/nes_keyboard.h
+[; ;Source/nes_keyboard.h: 21: struct KEYMAP button_key_maps[] =
+[v _button_key_maps `S311 ~T0 @X0 -> 9 `i e ]
+[i _button_key_maps
+:U ..
+:U ..
+-> << -> 1 `i -> 0 `i `uc
+-> -> 4 `i `us
+..
+:U ..
+-> << -> 1 `i -> 1 `i `uc
+-> -> 5 `i `us
+..
+:U ..
+-> << -> 1 `i -> 2 `i `uc
+-> -> 41 `i `us
+..
+:U ..
+-> << -> 1 `i -> 3 `i `uc
+-> -> 40 `i `us
+..
+:U ..
+-> << -> 1 `i -> 4 `i `uc
+-> -> 82 `i `us
+..
+:U ..
+-> << -> 1 `i -> 5 `i `uc
+-> -> 81 `i `us
+..
+:U ..
+-> << -> 1 `i -> 6 `i `uc
+-> -> 80 `i `us
+..
+:U ..
+-> << -> 1 `i -> 7 `i `uc
+-> -> 79 `i `us
+..
+:U ..
+-> -> -> 0 `i `*v `uc
+-> -> -> 0 `i `*v `us
+..
+..
+]
+"23 Source/Main.c
+[; ;Source/Main.c: 23: 
+[p x FOSC = INTOSC ]
+"24
+[; ;Source/Main.c: 24:     LATC = 0b00000000;
+[p x WDTE = OFF ]
+"25
+[; ;Source/Main.c: 25: }
+[p x PWRTE = OFF ]
+"26
+[; ;Source/Main.c: 26: 
+[p x MCLRE = OFF ]
+"27
+[; ;Source/Main.c: 27: static void EnableInterrupts(void)
+[p x CP = OFF ]
+"28
+[; ;Source/Main.c: 28: {
+[p x BOREN = ON ]
+"29
+[; ;Source/Main.c: 29:     UIE = 0x4B;
+[p x CLKOUTEN = OFF ]
+"30
+[; ;Source/Main.c: 30:     INTCONbits.PEIE = 1;
+[p x IESO = OFF ]
+"31
+[; ;Source/Main.c: 31:     INTCONbits.GIE = 1;
+[p x FCMEN = OFF ]
+"34
+[; ;Source/Main.c: 34: 
+[p x WRT = OFF ]
+"35
+[; ;Source/Main.c: 35: void PrepareTxBuffer(uint8_t keypad_reading)
+[p x CPUDIV = NOCLKDIV ]
+"36
+[; ;Source/Main.c: 36: {
+[p x USBLSCLK = 48MHz ]
+"37
+[; ;Source/Main.c: 37: 
+[p x PLLMULT = 3x ]
+"38
+[; ;Source/Main.c: 38:     uint8_t n;
+[p x PLLEN = ENABLED ]
+"39
+[; ;Source/Main.c: 39: 
+[p x STVREN = ON ]
+"40
+[; ;Source/Main.c: 40: 
+[p x BORV = LO ]
+"41
+[; ;Source/Main.c: 41:     for(n = 0 ; n < 0x08; n++)
+[p x LPBOR = OFF ]
+"42
+[; ;Source/Main.c: 42:     {
+[p x LVP = OFF ]
+"50
+[; ;Source/Main.c: 50: 
+[v _last_keypad_reading `uc ~T0 @X0 1 e ]
+[v $root$_ISRCode `(v ~T0 @X0 0 e ]
+"53
+[; ;Source/Main.c: 53: 
+[v _ISRCode `(v ~T1 @X0 1 ef ]
+"54
+[; ;Source/Main.c: 54:         uint8_t max_buttons = 6;
+{
+[e :U _ISRCode ]
+[f ]
+"55
+[; ;Source/Main.c: 55:         while( button_key_maps[i].button != ((void*)0) )
+[e $ ! != -> . . _PIR2bits 0 2 `i -> 0 `i 313  ]
+[e ( _ProcessUSBTransactions ..  ]
+[e :U 313 ]
+"56
+[; ;Source/Main.c: 56:         {
+[e :UE 312 ]
+}
+"58
+[; ;Source/Main.c: 58:             {
+[v _InitializeSystem `(v ~T0 @X0 1 sf ]
+"59
+[; ;Source/Main.c: 59:                 HIDTxBuffer[index++] = button_key_maps[i].key;
+{
+[e :U _InitializeSystem ]
+[f ]
+"60
+[; ;Source/Main.c: 60:                 if (index > max_buttons)
+[e = _ANSELA -> -> 0 `i `uc ]
+"61
+[; ;Source/Main.c: 61:                 {
+[e = _ANSELC -> -> 0 `i `uc ]
+"62
+[; ;Source/Main.c: 62:                     break;
+[e = _OSCTUNE -> -> 0 `i `uc ]
+"63
+[; ;Source/Main.c: 63:                 }
+[e = _OSCCON -> -> 252 `i `uc ]
+"64
+[; ;Source/Main.c: 64:             }
+[e = _ACTCON -> -> 144 `i `uc ]
+"65
+[; ;Source/Main.c: 65:             i++;
+[e = _OPTION_REG -> -> 195 `i `uc ]
+"68
+[; ;Source/Main.c: 68:     else
+[e = _LATC -> -> 0 `i `uc ]
+"69
+[; ;Source/Main.c: 69:     {
+[e :UE 314 ]
+}
+"71
+[; ;Source/Main.c: 71:     }
+[v _EnableInterrupts `(v ~T0 @X0 1 sf ]
+"72
+[; ;Source/Main.c: 72: }
+{
+[e :U _EnableInterrupts ]
+[f ]
+"73
+[; ;Source/Main.c: 73: 
+[e = _UIE -> -> 75 `i `uc ]
+"74
+[; ;Source/Main.c: 74: void ProcessIncommingData(void)
+[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
+"75
+[; ;Source/Main.c: 75: {
+[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
+"76
+[; ;Source/Main.c: 76: 
+[e = . . _PIE2bits 0 2 -> -> 1 `i `uc ]
+"77
+[; ;Source/Main.c: 77: 
+[e :UE 315 ]
+}
+"79
+[; ;Source/Main.c: 79: 
+[v _PrepareTxBuffer `(v ~T0 @X0 1 ef1`uc ]
+"80
+[; ;Source/Main.c: 80: 
+{
+[e :U _PrepareTxBuffer ]
+"79
+[; ;Source/Main.c: 79: 
+[v _keypad_reading `uc ~T0 @X0 1 r1 ]
+"80
+[; ;Source/Main.c: 80: 
+[f ]
+"82
+[; ;Source/Main.c: 82: }
+[v _n `uc ~T0 @X0 1 a ]
+"85
+[; ;Source/Main.c: 85: {
+{
+[e = _n -> -> 0 `i `uc ]
+[e $ < -> _n `i -> 8 `i 317  ]
+[e $U 318  ]
+[e :U 317 ]
+"86
+[; ;Source/Main.c: 86:     if(IsUsbDataAvaialble(0x00) > 0 )
+{
+"87
+[; ;Source/Main.c: 87:     {
+[e = *U + &U _HIDTxBuffer * -> _n `ux -> -> # *U &U _HIDTxBuffer `ui `ux -> -> 0 `i `uc ]
+"88
+[; ;Source/Main.c: 88:         ProcessIncommingData();
+}
+[e ++ _n -> -> 1 `i `uc ]
+[e $ < -> _n `i -> 8 `i 317  ]
+[e :U 318 ]
+}
+"91
+[; ;Source/Main.c: 91: }
+[e $ ! > -> _keypad_reading `i -> 0 `i 320  ]
+"92
+[; ;Source/Main.c: 92: 
+{
+"93
+[; ;Source/Main.c: 93: void ProcessIO(void)
+[e :U 323 ]
+{
+[e = . . _PORTAbits 0 4 -> -> 1 `i `uc ]
+}
+[e :U 322 ]
+"95
+[; ;Source/Main.c: 95: 
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+"96
+[; ;Source/Main.c: 96:     if (((DeviceState == 0x05) && (UCONbits.SUSPND==0))) CheckUsb();
+[v _index `uc ~T0 @X0 1 a ]
+[e = _index -> -> 2 `i `uc ]
+"98
+[; ;Source/Main.c: 98: 
+[v _max_buttons `uc ~T0 @X0 1 a ]
+[e = _max_buttons -> -> 6 `i `uc ]
+"99
+[; ;Source/Main.c: 99:     uint8_t reading = NES_read_pad();
+[e $U 324  ]
+[e :U 325 ]
+"100
+[; ;Source/Main.c: 100:     if (reading == last_keypad_reading ) return;
+{
+"101
+[; ;Source/Main.c: 101: 
+[e $ ! > & -> _keypad_reading `i -> . *U + &U _button_key_maps * -> _i `ux -> -> # *U &U _button_key_maps `ui `ux 0 `i -> 0 `i 327  ]
+"102
+[; ;Source/Main.c: 102: 
+{
+"103
+[; ;Source/Main.c: 103:     PrepareTxBuffer(reading);
+[e = *U + &U _HIDTxBuffer * -> ++ _index -> -> 1 `i `uc `ux -> -> # *U &U _HIDTxBuffer `ui `ux -> . *U + &U _button_key_maps * -> _i `ux -> -> # *U &U _button_key_maps `ui `ux 1 `uc ]
+"104
+[; ;Source/Main.c: 104:     HIDSend(0x00);
+[e $ ! > -> _index `i -> _max_buttons `i 328  ]
+"105
+[; ;Source/Main.c: 105: 
+{
+"106
+[; ;Source/Main.c: 106: 
+[e $U 326  ]
+"107
+[; ;Source/Main.c: 107:     last_keypad_reading = reading;
+}
+[e :U 328 ]
+"108
+[; ;Source/Main.c: 108: }
+}
+[e :U 327 ]
+"109
+[; ;Source/Main.c: 109: 
+[e ++ _i -> -> 1 `i `uc ]
+"110
+[; ;Source/Main.c: 110: void main(void)
+}
+[e :U 324 ]
+"99
+[; ;Source/Main.c: 99:     uint8_t reading = NES_read_pad();
+[e $ != -> -> . *U + &U _button_key_maps * -> _i `ux -> -> # *U &U _button_key_maps `ui `ux 0 `i `*v -> -> 0 `i `*v 325  ]
+[e :U 326 ]
+"111
+[; ;Source/Main.c: 111: {
+}
+[e $U 329  ]
+"112
+[; ;Source/Main.c: 112:     InitializeSystem();
+[e :U 320 ]
+"113
+[; ;Source/Main.c: 113:     NES_GPIO_Initialize();
+{
+"114
+[; ;Source/Main.c: 114:     InitializeUSB();
+[e :U 332 ]
+{
+[e = . . _PORTAbits 0 4 -> -> 0 `i `uc ]
+}
+[e :U 331 ]
+"115
+[; ;Source/Main.c: 115:     EnableUSBModule();
+}
+[e :U 329 ]
+"116
+[; ;Source/Main.c: 116:     EnableInterrupts();
+[e :UE 316 ]
+}
+"118
+[; ;Source/Main.c: 118:     while(1) { ProcessIO(); }
+[v _ProcessIncommingData `(v ~T0 @X0 1 ef ]
+"119
+[; ;Source/Main.c: 119: }
+{
+[e :U _ProcessIncommingData ]
+[f ]
+"126
+[e :UE 333 ]
+}
+"128
+[v _CheckUsb `(v ~T0 @X0 1 sf ]
+"129
+{
+[e :U _CheckUsb ]
+[f ]
+"130
+[e $ ! > -> ( _IsUsbDataAvaialble (1 -> -> 0 `i `uc `i -> 0 `i 335  ]
+"131
+{
+"132
+[e ( _ProcessIncommingData ..  ]
+"133
+[e ( _ReArmInterface (1 -> -> 0 `i `uc ]
+"134
+}
+[e :U 335 ]
+"135
+[e :UE 334 ]
+}
+"137
+[v _ProcessIO `(v ~T0 @X0 1 ef ]
+"138
+{
+[e :U _ProcessIO ]
+[f ]
+"140
+[e $ ! && == -> _DeviceState `i -> 5 `i == -> . . _UCONbits 0 1 `i -> 0 `i 337  ]
+[e ( _CheckUsb ..  ]
+[e :U 337 ]
+"143
+[v _reading `uc ~T0 @X0 1 a ]
+[e = _reading ( _NES_read_pad ..  ]
+"144
+[e $ ! == -> _reading `i -> _last_keypad_reading `i 338  ]
+[e $UE 336  ]
+[e :U 338 ]
+"147
+[e ( _PrepareTxBuffer (1 _reading ]
+"148
+[e ( _HIDSend (1 -> -> 0 `i `uc ]
+"151
+[e = _last_keypad_reading _reading ]
+"152
+[e :UE 336 ]
+}
+[v $root$_main `(v ~T0 @X0 0 e ]
+"154
+[v _main `(v ~T0 @X0 1 ef ]
+"155
+{
+[e :U _main ]
+[f ]
+"156
+[e ( _InitializeSystem ..  ]
+"157
+[e ( _NES_GPIO_Initialize ..  ]
+"158
+[e ( _InitializeUSB ..  ]
+"159
+[e ( _EnableUSBModule ..  ]
+"160
+[e ( _EnableInterrupts ..  ]
+"162
+[e :U 341 ]
+{
+[e ( _ProcessIO ..  ]
+}
+[e :U 340 ]
+[e $U 341  ]
+[e :U 342 ]
+"163
+[e :UE 339 ]
+}
