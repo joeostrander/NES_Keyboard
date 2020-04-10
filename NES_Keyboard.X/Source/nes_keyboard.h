@@ -20,9 +20,9 @@ struct KEYMAP
 
 struct KEYMAP button_key_maps[] =
 {
-    { BUTTON_A, KEY_A },
-    { BUTTON_B, KEY_B },
-    { BUTTON_SELECT, KEY_ESC },
+    { BUTTON_A, KEY_X },
+    { BUTTON_B, KEY_Z },
+    { BUTTON_SELECT, KEY_RIGHTSHIFT },
     { BUTTON_START, KEY_ENTER },
     { BUTTON_UP, KEY_UP },
     { BUTTON_DOWN, KEY_DOWN },

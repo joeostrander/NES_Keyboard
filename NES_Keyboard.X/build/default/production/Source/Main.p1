@@ -12,12 +12,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 [s S308 `uc 1 `uc 1 `us -> -> 1 `i `ux ]
 [n S308 . bLength bDscType string ]
 "180
-[; ;Source/UsbDescriptors.h: 180: const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[11];}StringDescriptor1={sizeof(StringDescriptor1),0x03,
-[s S309 `uc 1 `uc 1 `us -> 11 `i ]
+[; ;Source/UsbDescriptors.h: 180: const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[13];}StringDescriptor1={sizeof(StringDescriptor1),0x03,
+[s S309 `uc 1 `uc 1 `us -> 13 `i ]
 [n S309 . bLength bDscType string ]
 "183
-[; ;Source/UsbDescriptors.h: 183: const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[20];}StringDescriptor2={sizeof(StringDescriptor2),0x03,
-[s S310 `uc 1 `uc 1 `us -> 20 `i ]
+[; ;Source/UsbDescriptors.h: 183: const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[12];}StringDescriptor2={sizeof(StringDescriptor2),0x03,
+[s S310 `uc 1 `uc 1 `us -> 12 `i ]
 [n S310 . bLength bDscType string ]
 "16 Source/nes_keyboard.h
 [; ;Source/nes_keyboard.h: 16: {
@@ -726,7 +726,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 "180
-[; ;Source/UsbDescriptors.h: 180: const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[11];}StringDescriptor1={sizeof(StringDescriptor1),0x03,
+[; ;Source/UsbDescriptors.h: 180: const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[13];}StringDescriptor1={sizeof(StringDescriptor1),0x03,
 [v _StringDescriptor1 `CS309 ~T0 @X0 1 e ]
 [i _StringDescriptor1
 :U ..
@@ -734,23 +734,25 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> # _StringDescriptor1 `ui `uc
 -> -> 3 `i `uc
 :U ..
--> -> 68 `ui `us
--> -> 73 `ui `us
--> -> 89 `ui `us
+-> -> 74 `ui `us
+-> -> 111 `ui `us
+-> -> 101 `ui `us
 -> -> 32 `ui `us
--> -> 68 `ui `us
--> -> 101 `ui `us
--> -> 118 `ui `us
--> -> 105 `ui `us
--> -> 99 `ui `us
--> -> 101 `ui `us
+-> -> 79 `ui `us
 -> -> 115 `ui `us
+-> -> 116 `ui `us
+-> -> 114 `ui `us
+-> -> 97 `ui `us
+-> -> 110 `ui `us
+-> -> 100 `ui `us
+-> -> 101 `ui `us
+-> -> 114 `ui `us
 ..
 ..
 ..
 ]
 "183
-[; ;Source/UsbDescriptors.h: 183: const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[20];}StringDescriptor2={sizeof(StringDescriptor2),0x03,
+[; ;Source/UsbDescriptors.h: 183: const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[12];}StringDescriptor2={sizeof(StringDescriptor2),0x03,
 [v _StringDescriptor2 `CS310 ~T0 @X0 1 e ]
 [i _StringDescriptor2
 :U ..
@@ -758,17 +760,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> # _StringDescriptor2 `ui `uc
 -> -> 3 `i `uc
 :U ..
--> -> 49 `ui `us
--> -> 54 `ui `us
--> -> 70 `ui `us
--> -> 49 `ui `us
--> -> 52 `ui `us
--> -> 53 `ui `us
--> -> 53 `ui `us
--> -> 32 `ui `us
--> -> 72 `ui `us
--> -> 73 `ui `us
--> -> 68 `ui `us
+-> -> 78 `ui `us
+-> -> 69 `ui `us
+-> -> 83 `ui `us
 -> -> 32 `ui `us
 -> -> 75 `ui `us
 -> -> 101 `ui `us
@@ -803,15 +797,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 :U ..
 :U ..
 -> << -> 1 `i -> 0 `i `uc
--> -> 4 `i `us
+-> -> 27 `i `us
 ..
 :U ..
 -> << -> 1 `i -> 1 `i `uc
--> -> 5 `i `us
+-> -> 29 `i `us
 ..
 :U ..
 -> << -> 1 `i -> 2 `i `uc
--> -> 41 `i `us
+-> -> 229 `i `us
 ..
 :U ..
 -> << -> 1 `i -> 3 `i `uc
@@ -839,350 +833,386 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ..
 ]
-"23 Source/Main.c
-[; ;Source/Main.c: 23: 
+"22 Source/Main.c
 [p x FOSC = INTOSC ]
-"24
-[; ;Source/Main.c: 24:     LATC = 0b00000000;
+"23
 [p x WDTE = OFF ]
-"25
-[; ;Source/Main.c: 25: }
+"24
 [p x PWRTE = OFF ]
-"26
-[; ;Source/Main.c: 26: 
+"25
 [p x MCLRE = OFF ]
-"27
-[; ;Source/Main.c: 27: static void EnableInterrupts(void)
+"26
 [p x CP = OFF ]
-"28
-[; ;Source/Main.c: 28: {
+"27
 [p x BOREN = ON ]
-"29
-[; ;Source/Main.c: 29:     UIE = 0x4B;
+"28
 [p x CLKOUTEN = OFF ]
-"30
-[; ;Source/Main.c: 30:     INTCONbits.PEIE = 1;
+"29
 [p x IESO = OFF ]
-"31
-[; ;Source/Main.c: 31:     INTCONbits.GIE = 1;
+"30
 [p x FCMEN = OFF ]
-"34
-[; ;Source/Main.c: 34: 
+"33
 [p x WRT = OFF ]
-"35
-[; ;Source/Main.c: 35: void PrepareTxBuffer(uint8_t keypad_reading)
+"34
 [p x CPUDIV = NOCLKDIV ]
-"36
-[; ;Source/Main.c: 36: {
+"35
 [p x USBLSCLK = 48MHz ]
-"37
-[; ;Source/Main.c: 37: 
+"36
 [p x PLLMULT = 3x ]
-"38
-[; ;Source/Main.c: 38:     uint8_t n;
+"37
 [p x PLLEN = ENABLED ]
-"39
-[; ;Source/Main.c: 39: 
+"38
 [p x STVREN = ON ]
-"40
-[; ;Source/Main.c: 40: 
+"39
 [p x BORV = LO ]
-"41
-[; ;Source/Main.c: 41:     for(n = 0 ; n < 0x08; n++)
+"40
 [p x LPBOR = OFF ]
-"42
-[; ;Source/Main.c: 42:     {
+"41
 [p x LVP = OFF ]
-"50
-[; ;Source/Main.c: 50: 
+"59
+[; ;Source/Main.c: 59: uint8_t last_keypad_reading;
 [v _last_keypad_reading `uc ~T0 @X0 1 e ]
 [v $root$_ISRCode `(v ~T0 @X0 0 e ]
-"53
-[; ;Source/Main.c: 53: 
+"62
+[; ;Source/Main.c: 62: void __attribute__((picinterrupt(("")))) ISRCode (void)
 [v _ISRCode `(v ~T1 @X0 1 ef ]
-"54
-[; ;Source/Main.c: 54:         uint8_t max_buttons = 6;
+"63
+[; ;Source/Main.c: 63: {
 {
 [e :U _ISRCode ]
 [f ]
-"55
-[; ;Source/Main.c: 55:         while( button_key_maps[i].button != ((void*)0) )
+"64
+[; ;Source/Main.c: 64:     if (PIR2bits.USBIF) ProcessUSBTransactions();
 [e $ ! != -> . . _PIR2bits 0 2 `i -> 0 `i 313  ]
 [e ( _ProcessUSBTransactions ..  ]
 [e :U 313 ]
-"56
-[; ;Source/Main.c: 56:         {
+"65
+[; ;Source/Main.c: 65: }
 [e :UE 312 ]
 }
-"58
-[; ;Source/Main.c: 58:             {
+"67
+[; ;Source/Main.c: 67: static void InitializeSystem(void)
 [v _InitializeSystem `(v ~T0 @X0 1 sf ]
-"59
-[; ;Source/Main.c: 59:                 HIDTxBuffer[index++] = button_key_maps[i].key;
+"68
+[; ;Source/Main.c: 68: {
 {
 [e :U _InitializeSystem ]
 [f ]
-"60
-[; ;Source/Main.c: 60:                 if (index > max_buttons)
-[e = _ANSELA -> -> 0 `i `uc ]
-"61
-[; ;Source/Main.c: 61:                 {
-[e = _ANSELC -> -> 0 `i `uc ]
-"62
-[; ;Source/Main.c: 62:                     break;
-[e = _OSCTUNE -> -> 0 `i `uc ]
-"63
-[; ;Source/Main.c: 63:                 }
-[e = _OSCCON -> -> 252 `i `uc ]
-"64
-[; ;Source/Main.c: 64:             }
-[e = _ACTCON -> -> 144 `i `uc ]
-"65
-[; ;Source/Main.c: 65:             i++;
-[e = _OPTION_REG -> -> 195 `i `uc ]
-"68
-[; ;Source/Main.c: 68:     else
-[e = _LATC -> -> 0 `i `uc ]
 "69
-[; ;Source/Main.c: 69:     {
+[; ;Source/Main.c: 69:     ANSELA = 0x00;
+[e = _ANSELA -> -> 0 `i `uc ]
+"70
+[; ;Source/Main.c: 70:     ANSELC = 0x00;
+[e = _ANSELC -> -> 0 `i `uc ]
+"71
+[; ;Source/Main.c: 71:     OSCTUNE = 0x00;
+[e = _OSCTUNE -> -> 0 `i `uc ]
+"72
+[; ;Source/Main.c: 72:     OSCCON = 0xFC;
+[e = _OSCCON -> -> 252 `i `uc ]
+"73
+[; ;Source/Main.c: 73:     ACTCON = 0x90;
+[e = _ACTCON -> -> 144 `i `uc ]
+"74
+[; ;Source/Main.c: 74:     OPTION_REG = 0xC3;
+[e = _OPTION_REG -> -> 195 `i `uc ]
+"77
+[; ;Source/Main.c: 77:     LATC = 0b00000000;
+[e = _LATC -> -> 0 `i `uc ]
+"78
+[; ;Source/Main.c: 78: }
 [e :UE 314 ]
 }
-"71
-[; ;Source/Main.c: 71:     }
+"80
+[; ;Source/Main.c: 80: static void EnableInterrupts(void)
 [v _EnableInterrupts `(v ~T0 @X0 1 sf ]
-"72
-[; ;Source/Main.c: 72: }
+"81
+[; ;Source/Main.c: 81: {
 {
 [e :U _EnableInterrupts ]
 [f ]
-"73
-[; ;Source/Main.c: 73: 
+"82
+[; ;Source/Main.c: 82:     UIE = 0x4B;
 [e = _UIE -> -> 75 `i `uc ]
-"74
-[; ;Source/Main.c: 74: void ProcessIncommingData(void)
+"83
+[; ;Source/Main.c: 83:     INTCONbits.PEIE = 1;
 [e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
-"75
-[; ;Source/Main.c: 75: {
+"84
+[; ;Source/Main.c: 84:     INTCONbits.GIE = 1;
 [e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
-"76
-[; ;Source/Main.c: 76: 
+"85
+[; ;Source/Main.c: 85:     PIE2bits.USBIE = 1;
 [e = . . _PIE2bits 0 2 -> -> 1 `i `uc ]
-"77
-[; ;Source/Main.c: 77: 
+"86
+[; ;Source/Main.c: 86: }
 [e :UE 315 ]
 }
-"79
-[; ;Source/Main.c: 79: 
+"88
+[; ;Source/Main.c: 88: void PrepareTxBuffer(uint8_t keypad_reading)
 [v _PrepareTxBuffer `(v ~T0 @X0 1 ef1`uc ]
-"80
-[; ;Source/Main.c: 80: 
+"89
+[; ;Source/Main.c: 89: {
 {
 [e :U _PrepareTxBuffer ]
-"79
-[; ;Source/Main.c: 79: 
+"88
+[; ;Source/Main.c: 88: void PrepareTxBuffer(uint8_t keypad_reading)
 [v _keypad_reading `uc ~T0 @X0 1 r1 ]
-"80
-[; ;Source/Main.c: 80: 
+"89
+[; ;Source/Main.c: 89: {
 [f ]
-"82
-[; ;Source/Main.c: 82: }
+"91
+[; ;Source/Main.c: 91:     uint8_t n;
 [v _n `uc ~T0 @X0 1 a ]
-"85
-[; ;Source/Main.c: 85: {
+"94
+[; ;Source/Main.c: 94:     for(n = 0 ; n < 0x08; n++)
 {
 [e = _n -> -> 0 `i `uc ]
 [e $ < -> _n `i -> 8 `i 317  ]
 [e $U 318  ]
 [e :U 317 ]
-"86
-[; ;Source/Main.c: 86:     if(IsUsbDataAvaialble(0x00) > 0 )
+"95
+[; ;Source/Main.c: 95:     {
 {
-"87
-[; ;Source/Main.c: 87:     {
+"96
+[; ;Source/Main.c: 96:         HIDTxBuffer[n] = 0x00;
 [e = *U + &U _HIDTxBuffer * -> _n `ux -> -> # *U &U _HIDTxBuffer `ui `ux -> -> 0 `i `uc ]
-"88
-[; ;Source/Main.c: 88:         ProcessIncommingData();
+"97
+[; ;Source/Main.c: 97:     }
 }
 [e ++ _n -> -> 1 `i `uc ]
 [e $ < -> _n `i -> 8 `i 317  ]
 [e :U 318 ]
 }
-"91
-[; ;Source/Main.c: 91: }
+"100
+[; ;Source/Main.c: 100:     if ( keypad_reading > 0)
 [e $ ! > -> _keypad_reading `i -> 0 `i 320  ]
-"92
-[; ;Source/Main.c: 92: 
+"101
+[; ;Source/Main.c: 101:     {
 {
-"93
-[; ;Source/Main.c: 93: void ProcessIO(void)
+"102
+[; ;Source/Main.c: 102:         do { PORTAbits.RA4 = 1; } while(0);
 [e :U 323 ]
 {
 [e = . . _PORTAbits 0 4 -> -> 1 `i `uc ]
 }
 [e :U 322 ]
-"95
-[; ;Source/Main.c: 95: 
+"104
+[; ;Source/Main.c: 104:         uint8_t i = 0;
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
-"96
-[; ;Source/Main.c: 96:     if (((DeviceState == 0x05) && (UCONbits.SUSPND==0))) CheckUsb();
+"105
+[; ;Source/Main.c: 105:         uint8_t index = 2;
 [v _index `uc ~T0 @X0 1 a ]
 [e = _index -> -> 2 `i `uc ]
-"98
-[; ;Source/Main.c: 98: 
+"107
+[; ;Source/Main.c: 107:         uint8_t max_buttons = 6;
 [v _max_buttons `uc ~T0 @X0 1 a ]
 [e = _max_buttons -> -> 6 `i `uc ]
-"99
-[; ;Source/Main.c: 99:     uint8_t reading = NES_read_pad();
+"108
+[; ;Source/Main.c: 108:         while( button_key_maps[i].button != ((void*)0) )
 [e $U 324  ]
 [e :U 325 ]
-"100
-[; ;Source/Main.c: 100:     if (reading == last_keypad_reading ) return;
-{
-"101
-[; ;Source/Main.c: 101: 
-[e $ ! > & -> _keypad_reading `i -> . *U + &U _button_key_maps * -> _i `ux -> -> # *U &U _button_key_maps `ui `ux 0 `i -> 0 `i 327  ]
-"102
-[; ;Source/Main.c: 102: 
-{
-"103
-[; ;Source/Main.c: 103:     PrepareTxBuffer(reading);
-[e = *U + &U _HIDTxBuffer * -> ++ _index -> -> 1 `i `uc `ux -> -> # *U &U _HIDTxBuffer `ui `ux -> . *U + &U _button_key_maps * -> _i `ux -> -> # *U &U _button_key_maps `ui `ux 1 `uc ]
-"104
-[; ;Source/Main.c: 104:     HIDSend(0x00);
-[e $ ! > -> _index `i -> _max_buttons `i 328  ]
-"105
-[; ;Source/Main.c: 105: 
-{
-"106
-[; ;Source/Main.c: 106: 
-[e $U 326  ]
-"107
-[; ;Source/Main.c: 107:     last_keypad_reading = reading;
-}
-[e :U 328 ]
-"108
-[; ;Source/Main.c: 108: }
-}
-[e :U 327 ]
 "109
-[; ;Source/Main.c: 109: 
-[e ++ _i -> -> 1 `i `uc ]
+[; ;Source/Main.c: 109:         {
+{
 "110
-[; ;Source/Main.c: 110: void main(void)
-}
-[e :U 324 ]
-"99
-[; ;Source/Main.c: 99:     uint8_t reading = NES_read_pad();
-[e $ != -> -> . *U + &U _button_key_maps * -> _i `ux -> -> # *U &U _button_key_maps `ui `ux 0 `i `*v -> -> 0 `i `*v 325  ]
-[e :U 326 ]
+[; ;Source/Main.c: 110:             if ( (keypad_reading & button_key_maps[i].button) > 0)
+[e $ ! > & -> _keypad_reading `i -> . *U + &U _button_key_maps * -> _i `ux -> -> # *U &U _button_key_maps `ui `ux 0 `i -> 0 `i 327  ]
 "111
-[; ;Source/Main.c: 111: {
+[; ;Source/Main.c: 111:             {
+{
+"112
+[; ;Source/Main.c: 112:                 uint16_t key = button_key_maps[i].key;
+[v _key `us ~T0 @X0 1 a ]
+[e = _key . *U + &U _button_key_maps * -> _i `ux -> -> # *U &U _button_key_maps `ui `ux 1 ]
+"114
+[; ;Source/Main.c: 114:                 if (key == 0xe5)
+[e $ ! == -> _key `ui -> -> 229 `i `ui 328  ]
+"115
+[; ;Source/Main.c: 115:                 {
+{
+"116
+[; ;Source/Main.c: 116:                     HIDTxBuffer[0] = 0x20;
+[e = *U + &U _HIDTxBuffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _HIDTxBuffer `ui `ux -> -> 32 `i `uc ]
+"118
+[; ;Source/Main.c: 118:                 }
 }
 [e $U 329  ]
-"112
-[; ;Source/Main.c: 112:     InitializeSystem();
-[e :U 320 ]
-"113
-[; ;Source/Main.c: 113:     NES_GPIO_Initialize();
+"119
+[; ;Source/Main.c: 119:                 else
+[e :U 328 ]
+"120
+[; ;Source/Main.c: 120:                 {
 {
-"114
-[; ;Source/Main.c: 114:     InitializeUSB();
-[e :U 332 ]
+"123
+[; ;Source/Main.c: 123:                     HIDTxBuffer[index++] = key;
+[e = *U + &U _HIDTxBuffer * -> ++ _index -> -> 1 `i `uc `ux -> -> # *U &U _HIDTxBuffer `ui `ux -> _key `uc ]
+"124
+[; ;Source/Main.c: 124:                     if (index > max_buttons)
+[e $ ! > -> _index `i -> _max_buttons `i 330  ]
+"125
+[; ;Source/Main.c: 125:                     {
+{
+"126
+[; ;Source/Main.c: 126:                         break;
+[e $U 326  ]
+"127
+[; ;Source/Main.c: 127:                     }
+}
+[e :U 330 ]
+"128
+[; ;Source/Main.c: 128:                 }
+}
+[e :U 329 ]
+"131
+[; ;Source/Main.c: 131:             }
+}
+[e :U 327 ]
+"132
+[; ;Source/Main.c: 132:             i++;
+[e ++ _i -> -> 1 `i `uc ]
+"133
+[; ;Source/Main.c: 133:         }
+}
+[e :U 324 ]
+"108
+[; ;Source/Main.c: 108:         while( button_key_maps[i].button != ((void*)0) )
+[e $ != -> -> . *U + &U _button_key_maps * -> _i `ux -> -> # *U &U _button_key_maps `ui `ux 0 `i `*v -> -> 0 `i `*v 325  ]
+[e :U 326 ]
+"134
+[; ;Source/Main.c: 134:     }
+}
+[e $U 331  ]
+"135
+[; ;Source/Main.c: 135:     else
+[e :U 320 ]
+"136
+[; ;Source/Main.c: 136:     {
+{
+"137
+[; ;Source/Main.c: 137:         do { PORTAbits.RA4 = 0; } while(0);
+[e :U 334 ]
 {
 [e = . . _PORTAbits 0 4 -> -> 0 `i `uc ]
 }
-[e :U 331 ]
-"115
-[; ;Source/Main.c: 115:     EnableUSBModule();
+[e :U 333 ]
+"138
+[; ;Source/Main.c: 138:     }
 }
-[e :U 329 ]
-"116
-[; ;Source/Main.c: 116:     EnableInterrupts();
+[e :U 331 ]
+"139
+[; ;Source/Main.c: 139: }
 [e :UE 316 ]
 }
-"118
-[; ;Source/Main.c: 118:     while(1) { ProcessIO(); }
+"141
+[; ;Source/Main.c: 141: void ProcessIncommingData(void)
 [v _ProcessIncommingData `(v ~T0 @X0 1 ef ]
-"119
-[; ;Source/Main.c: 119: }
+"142
+[; ;Source/Main.c: 142: {
 {
 [e :U _ProcessIncommingData ]
 [f ]
-"126
-[e :UE 333 ]
+"149
+[; ;Source/Main.c: 149: }
+[e :UE 335 ]
 }
-"128
+"151
+[; ;Source/Main.c: 151: static void CheckUsb(void)
 [v _CheckUsb `(v ~T0 @X0 1 sf ]
-"129
+"152
+[; ;Source/Main.c: 152: {
 {
 [e :U _CheckUsb ]
 [f ]
-"130
-[e $ ! > -> ( _IsUsbDataAvaialble (1 -> -> 0 `i `uc `i -> 0 `i 335  ]
-"131
+"153
+[; ;Source/Main.c: 153:     if(IsUsbDataAvaialble(0x00) > 0 )
+[e $ ! > -> ( _IsUsbDataAvaialble (1 -> -> 0 `i `uc `i -> 0 `i 337  ]
+"154
+[; ;Source/Main.c: 154:     {
 {
-"132
+"155
+[; ;Source/Main.c: 155:         ProcessIncommingData();
 [e ( _ProcessIncommingData ..  ]
-"133
+"156
+[; ;Source/Main.c: 156:         ReArmInterface(0x00);
 [e ( _ReArmInterface (1 -> -> 0 `i `uc ]
-"134
+"157
+[; ;Source/Main.c: 157:     }
 }
-[e :U 335 ]
-"135
-[e :UE 334 ]
+[e :U 337 ]
+"158
+[; ;Source/Main.c: 158: }
+[e :UE 336 ]
 }
-"137
+"160
+[; ;Source/Main.c: 160: void ProcessIO(void)
 [v _ProcessIO `(v ~T0 @X0 1 ef ]
-"138
+"161
+[; ;Source/Main.c: 161: {
 {
 [e :U _ProcessIO ]
 [f ]
-"140
-[e $ ! && == -> _DeviceState `i -> 5 `i == -> . . _UCONbits 0 1 `i -> 0 `i 337  ]
+"163
+[; ;Source/Main.c: 163:     if (((DeviceState == 0x05) && (UCONbits.SUSPND==0))) CheckUsb();
+[e $ ! && == -> _DeviceState `i -> 5 `i == -> . . _UCONbits 0 1 `i -> 0 `i 339  ]
 [e ( _CheckUsb ..  ]
-[e :U 337 ]
-"143
+[e :U 339 ]
+"166
+[; ;Source/Main.c: 166:     uint8_t reading = NES_read_pad();
 [v _reading `uc ~T0 @X0 1 a ]
 [e = _reading ( _NES_read_pad ..  ]
-"144
-[e $ ! == -> _reading `i -> _last_keypad_reading `i 338  ]
-[e $UE 336  ]
-[e :U 338 ]
-"147
+"167
+[; ;Source/Main.c: 167:     if (reading == last_keypad_reading ) return;
+[e $ ! == -> _reading `i -> _last_keypad_reading `i 340  ]
+[e $UE 338  ]
+[e :U 340 ]
+"170
+[; ;Source/Main.c: 170:     PrepareTxBuffer(reading);
 [e ( _PrepareTxBuffer (1 _reading ]
-"148
+"171
+[; ;Source/Main.c: 171:     HIDSend(0x00);
 [e ( _HIDSend (1 -> -> 0 `i `uc ]
-"151
+"174
+[; ;Source/Main.c: 174:     last_keypad_reading = reading;
 [e = _last_keypad_reading _reading ]
-"152
-[e :UE 336 ]
+"175
+[; ;Source/Main.c: 175: }
+[e :UE 338 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"154
+"177
+[; ;Source/Main.c: 177: void main(void)
 [v _main `(v ~T0 @X0 1 ef ]
-"155
+"178
+[; ;Source/Main.c: 178: {
 {
 [e :U _main ]
 [f ]
-"156
+"179
+[; ;Source/Main.c: 179:     InitializeSystem();
 [e ( _InitializeSystem ..  ]
-"157
+"180
+[; ;Source/Main.c: 180:     NES_GPIO_Initialize();
 [e ( _NES_GPIO_Initialize ..  ]
-"158
+"181
+[; ;Source/Main.c: 181:     InitializeUSB();
 [e ( _InitializeUSB ..  ]
-"159
+"182
+[; ;Source/Main.c: 182:     EnableUSBModule();
 [e ( _EnableUSBModule ..  ]
-"160
+"183
+[; ;Source/Main.c: 183:     EnableInterrupts();
 [e ( _EnableInterrupts ..  ]
-"162
-[e :U 341 ]
+"185
+[; ;Source/Main.c: 185:     while(1) { ProcessIO(); }
+[e :U 343 ]
 {
 [e ( _ProcessIO ..  ]
 }
-[e :U 340 ]
-[e $U 341  ]
 [e :U 342 ]
-"163
-[e :UE 339 ]
+[e $U 343  ]
+[e :U 344 ]
+"186
+[; ;Source/Main.c: 186: }
+[e :UE 341 ]
 }

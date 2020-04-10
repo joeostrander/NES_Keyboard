@@ -496,15 +496,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 :U ..
 :U ..
 -> << -> 1 `i -> 0 `i `uc
--> -> 4 `i `us
+-> -> 27 `i `us
 ..
 :U ..
 -> << -> 1 `i -> 1 `i `uc
--> -> 5 `i `us
+-> -> 29 `i `us
 ..
 :U ..
 -> << -> 1 `i -> 2 `i `uc
--> -> 41 `i `us
+-> -> 229 `i `us
 ..
 :U ..
 -> << -> 1 `i -> 3 `i `uc
@@ -532,119 +532,119 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ..
 ]
-"29 Source/nes_keyboard.c
-[; ;Source/nes_keyboard.c: 29: uint8_t last_reading = 0;
+"40 Source/nes_keyboard.c
+[; ;Source/nes_keyboard.c: 40: uint8_t last_reading = 0;
 [v _last_reading `uc ~T0 @X0 1 e ]
 [i _last_reading
 -> -> 0 `i `uc
 ]
-"31
-[; ;Source/nes_keyboard.c: 31: void NES_GPIO_Initialize()
-[v _NES_GPIO_Initialize `(v ~T0 @X0 1 ef ]
-"32
-[; ;Source/nes_keyboard.c: 32: {
-{
-[e :U _NES_GPIO_Initialize ]
-[f ]
-"33
-[; ;Source/nes_keyboard.c: 33:     ANSELCbits.ANSC3 = 0;
-[e = . . _ANSELCbits 0 3 -> -> 0 `i `uc ]
-"34
-[; ;Source/nes_keyboard.c: 34:     TRISCbits.TRISC3 = 1;
-[e = . . _TRISCbits 0 3 -> -> 1 `i `uc ]
-"35
-[; ;Source/nes_keyboard.c: 35:     TRISCbits.TRISC4 = 0;
-[e = . . _TRISCbits 0 4 -> -> 0 `i `uc ]
-"36
-[; ;Source/nes_keyboard.c: 36:     TRISCbits.TRISC5 = 0;
-[e = . . _TRISCbits 0 5 -> -> 0 `i `uc ]
-"38
-[; ;Source/nes_keyboard.c: 38:     ANSELAbits.ANSA4 = 0;
-[e = . . _ANSELAbits 0 1 -> -> 0 `i `uc ]
-"39
-[; ;Source/nes_keyboard.c: 39:     TRISAbits.TRISA4 = 0;
-[e = . . _TRISAbits 0 1 -> -> 0 `i `uc ]
-"40
-[; ;Source/nes_keyboard.c: 40: }
-[e :UE 307 ]
-}
 "42
-[; ;Source/nes_keyboard.c: 42: uint8_t NES_read_pad()
-[v _NES_read_pad `(uc ~T0 @X0 1 ef ]
+[; ;Source/nes_keyboard.c: 42: void NES_GPIO_Initialize()
+[v _NES_GPIO_Initialize `(v ~T0 @X0 1 ef ]
 "43
 [; ;Source/nes_keyboard.c: 43: {
 {
+[e :U _NES_GPIO_Initialize ]
+[f ]
+"44
+[; ;Source/nes_keyboard.c: 44:     ANSELCbits.ANSC3 = 0;
+[e = . . _ANSELCbits 0 3 -> -> 0 `i `uc ]
+"45
+[; ;Source/nes_keyboard.c: 45:     TRISCbits.TRISC3 = 1;
+[e = . . _TRISCbits 0 3 -> -> 1 `i `uc ]
+"46
+[; ;Source/nes_keyboard.c: 46:     TRISCbits.TRISC4 = 0;
+[e = . . _TRISCbits 0 4 -> -> 0 `i `uc ]
+"47
+[; ;Source/nes_keyboard.c: 47:     TRISCbits.TRISC5 = 0;
+[e = . . _TRISCbits 0 5 -> -> 0 `i `uc ]
+"49
+[; ;Source/nes_keyboard.c: 49:     ANSELAbits.ANSA4 = 0;
+[e = . . _ANSELAbits 0 1 -> -> 0 `i `uc ]
+"50
+[; ;Source/nes_keyboard.c: 50:     TRISAbits.TRISA4 = 0;
+[e = . . _TRISAbits 0 1 -> -> 0 `i `uc ]
+"51
+[; ;Source/nes_keyboard.c: 51: }
+[e :UE 307 ]
+}
+"53
+[; ;Source/nes_keyboard.c: 53: uint8_t NES_read_pad()
+[v _NES_read_pad `(uc ~T0 @X0 1 ef ]
+"54
+[; ;Source/nes_keyboard.c: 54: {
+{
 [e :U _NES_read_pad ]
 [f ]
-"63
-[; ;Source/nes_keyboard.c: 63:   do { LATCbits.LATC5 = 1; } while(0);
+"74
+[; ;Source/nes_keyboard.c: 74:   do { LATCbits.LATC4 = 1; } while(0);
 [e :U 311 ]
 {
-[e = . . _LATCbits 0 5 -> -> 1 `i `uc ]
+[e = . . _LATCbits 0 4 -> -> 1 `i `uc ]
 }
 [e :U 310 ]
-"64
-[; ;Source/nes_keyboard.c: 64:   _delay((unsigned long)((12)*(48000000L/4000000.0)));
+"75
+[; ;Source/nes_keyboard.c: 75:   _delay((unsigned long)((12)*(48000000L/4000000.0)));
 [e ( __delay (1 -> * -> -> 12 `i `d / -> -> 48000000 `l `d .4000000.0 `ul ]
-"65
-[; ;Source/nes_keyboard.c: 65:   do { LATCbits.LATC5 = 0; } while(0);
+"76
+[; ;Source/nes_keyboard.c: 76:   do { LATCbits.LATC4 = 0; } while(0);
 [e :U 314 ]
 {
-[e = . . _LATCbits 0 5 -> -> 0 `i `uc ]
+[e = . . _LATCbits 0 4 -> -> 0 `i `uc ]
 }
 [e :U 313 ]
-"69
-[; ;Source/nes_keyboard.c: 69:   uint8_t output = 0x00;
+"80
+[; ;Source/nes_keyboard.c: 80:   uint8_t output = 0x00;
 [v _output `uc ~T0 @X0 1 a ]
 [e = _output -> -> 0 `i `uc ]
-"70
-[; ;Source/nes_keyboard.c: 70:   int i;
+"81
+[; ;Source/nes_keyboard.c: 81:   int i;
 [v _i `i ~T0 @X0 1 a ]
-"71
-[; ;Source/nes_keyboard.c: 71:   for ( i = 0; i < 8; i++)
+"82
+[; ;Source/nes_keyboard.c: 82:   for ( i = 0; i < 8; i++)
 {
 [e = _i -> 0 `i ]
 [e $ < _i -> 8 `i 315  ]
 [e $U 316  ]
 [e :U 315 ]
-"72
-[; ;Source/nes_keyboard.c: 72:   {
+"83
+[; ;Source/nes_keyboard.c: 83:   {
 {
-"73
-[; ;Source/nes_keyboard.c: 73:       output |= !( (PORTCbits.RC3 & 0x1)) << i;
+"84
+[; ;Source/nes_keyboard.c: 84:       output |= !( (PORTCbits.RC3 & 0x1)) << i;
 [e =| _output -> << -> ! != & -> . . _PORTCbits 0 3 `i -> 1 `i -> 0 `i `i _i `uc ]
-"74
-[; ;Source/nes_keyboard.c: 74:       do { LATCbits.LATC4 = 1; } while(0);
+"85
+[; ;Source/nes_keyboard.c: 85:       do { LATCbits.LATC5 = 1; } while(0);
 [e :U 320 ]
 {
-[e = . . _LATCbits 0 4 -> -> 1 `i `uc ]
+[e = . . _LATCbits 0 5 -> -> 1 `i `uc ]
 }
 [e :U 319 ]
-"75
-[; ;Source/nes_keyboard.c: 75:       _delay((unsigned long)((6)*(48000000L/4000000.0)));
+"86
+[; ;Source/nes_keyboard.c: 86:       _delay((unsigned long)((6)*(48000000L/4000000.0)));
 [e ( __delay (1 -> * -> -> 6 `i `d / -> -> 48000000 `l `d .4000000.0 `ul ]
-"76
-[; ;Source/nes_keyboard.c: 76:       do { LATCbits.LATC4 = 0; } while(0);
+"87
+[; ;Source/nes_keyboard.c: 87:       do { LATCbits.LATC5 = 0; } while(0);
 [e :U 323 ]
 {
-[e = . . _LATCbits 0 4 -> -> 0 `i `uc ]
+[e = . . _LATCbits 0 5 -> -> 0 `i `uc ]
 }
 [e :U 322 ]
-"77
-[; ;Source/nes_keyboard.c: 77:       _delay((unsigned long)((6)*(48000000L/4000000.0)));
+"88
+[; ;Source/nes_keyboard.c: 88:       _delay((unsigned long)((6)*(48000000L/4000000.0)));
 [e ( __delay (1 -> * -> -> 6 `i `d / -> -> 48000000 `l `d .4000000.0 `ul ]
-"78
-[; ;Source/nes_keyboard.c: 78:   }
+"89
+[; ;Source/nes_keyboard.c: 89:   }
 }
 [e ++ _i -> 1 `i ]
 [e $ < _i -> 8 `i 315  ]
 [e :U 316 ]
 }
-"80
-[; ;Source/nes_keyboard.c: 80:   return output;
+"91
+[; ;Source/nes_keyboard.c: 91:   return output;
 [e ) _output ]
 [e $UE 308  ]
-"81
-[; ;Source/nes_keyboard.c: 81: }
+"92
+[; ;Source/nes_keyboard.c: 92: }
 [e :UE 308 ]
 }

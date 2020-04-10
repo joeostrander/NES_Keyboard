@@ -12,12 +12,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 [s S308 `uc 1 `uc 1 `us -> -> 1 `i `ux ]
 [n S308 . bLength bDscType string ]
 "180
-[; ;Source/UsbDescriptors.h: 180: const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[11];}StringDescriptor1={sizeof(StringDescriptor1),0x03,
-[s S309 `uc 1 `uc 1 `us -> 11 `i ]
+[; ;Source/UsbDescriptors.h: 180: const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[13];}StringDescriptor1={sizeof(StringDescriptor1),0x03,
+[s S309 `uc 1 `uc 1 `us -> 13 `i ]
 [n S309 . bLength bDscType string ]
 "183
-[; ;Source/UsbDescriptors.h: 183: const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[20];}StringDescriptor2={sizeof(StringDescriptor2),0x03,
-[s S310 `uc 1 `uc 1 `us -> 20 `i ]
+[; ;Source/UsbDescriptors.h: 183: const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[12];}StringDescriptor2={sizeof(StringDescriptor2),0x03,
+[s S310 `uc 1 `uc 1 `us -> 12 `i ]
 [n S310 . bLength bDscType string ]
 "138 Source/Usb.c
 [; ;Source/Usb.c: 138: {
@@ -706,7 +706,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 "180
-[; ;Source/UsbDescriptors.h: 180: const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[11];}StringDescriptor1={sizeof(StringDescriptor1),0x03,
+[; ;Source/UsbDescriptors.h: 180: const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[13];}StringDescriptor1={sizeof(StringDescriptor1),0x03,
 [v _StringDescriptor1 `CS309 ~T0 @X0 1 e ]
 [i _StringDescriptor1
 :U ..
@@ -714,23 +714,25 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> # _StringDescriptor1 `ui `uc
 -> -> 3 `i `uc
 :U ..
--> -> 68 `ui `us
--> -> 73 `ui `us
--> -> 89 `ui `us
+-> -> 74 `ui `us
+-> -> 111 `ui `us
+-> -> 101 `ui `us
 -> -> 32 `ui `us
--> -> 68 `ui `us
--> -> 101 `ui `us
--> -> 118 `ui `us
--> -> 105 `ui `us
--> -> 99 `ui `us
--> -> 101 `ui `us
+-> -> 79 `ui `us
 -> -> 115 `ui `us
+-> -> 116 `ui `us
+-> -> 114 `ui `us
+-> -> 97 `ui `us
+-> -> 110 `ui `us
+-> -> 100 `ui `us
+-> -> 101 `ui `us
+-> -> 114 `ui `us
 ..
 ..
 ..
 ]
 "183
-[; ;Source/UsbDescriptors.h: 183: const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[20];}StringDescriptor2={sizeof(StringDescriptor2),0x03,
+[; ;Source/UsbDescriptors.h: 183: const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[12];}StringDescriptor2={sizeof(StringDescriptor2),0x03,
 [v _StringDescriptor2 `CS310 ~T0 @X0 1 e ]
 [i _StringDescriptor2
 :U ..
@@ -738,17 +740,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> # _StringDescriptor2 `ui `uc
 -> -> 3 `i `uc
 :U ..
--> -> 49 `ui `us
--> -> 54 `ui `us
--> -> 70 `ui `us
--> -> 49 `ui `us
--> -> 52 `ui `us
--> -> 53 `ui `us
--> -> 53 `ui `us
--> -> 32 `ui `us
--> -> 72 `ui `us
--> -> 73 `ui `us
--> -> 68 `ui `us
+-> -> 78 `ui `us
+-> -> 69 `ui `us
+-> -> 83 `ui `us
 -> -> 32 `ui `us
 -> -> 75 `ui `us
 -> -> 101 `ui `us

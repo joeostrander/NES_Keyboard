@@ -3958,11 +3958,11 @@ const uint8_t HIDReport[] = {
 
 const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[1];}StringDescriptor0={sizeof(StringDescriptor0),0x03,{0x0409}};
 
-const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[11];}StringDescriptor1={sizeof(StringDescriptor1),0x03,
-{'D','I','Y',' ','D','e','v','i','c','e','s'}};
+const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[13];}StringDescriptor1={sizeof(StringDescriptor1),0x03,
+{'J','o','e',' ','O','s','t','r','a','n','d','e','r'}};
 
-const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[20];}StringDescriptor2={sizeof(StringDescriptor2),0x03,
-{'1','6','F','1','4','5','5',' ','H','I','D',' ','K','e','y','b','o','a','r','d'}};
+const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[12];}StringDescriptor2={sizeof(StringDescriptor2),0x03,
+{'N','E','S',' ','K','e','y','b','o','a','r','d'}};
 
 
 const uint8_t *const StringDescriptorPointers[0x03]=

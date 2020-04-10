@@ -9,7 +9,6 @@
  * The bulk of this code (minus NES stuff) was written by the above author and found at:
  * https://www.codeproject.com/Articles/830856/Microchip-PIC-F-USB-Stack
  * 
- * May he ride eternal, shiny and chrome
  * 
  * Joe Ostrander -- 20200223
  * 
@@ -45,6 +44,16 @@
 #define LED_SetHigh()            do { PORTAbits.RA4 = 1; } while(0)
 #define LED_SetLow()             do { PORTAbits.RA4 = 0; } while(0)
 #define LED_Toggle()             do { PORTAbits.RA4 = ~LATCbits.LATC2; } while(0)
+
+//Modifier Keys (First Byte in Keyboard Message)
+#define KEY_L_CTRL			0x01
+#define KEY_L_SHIFT			0x02
+#define KEY_L_ALT			0x04
+#define KEY_L_WIN			0x08
+#define KEY_R_CTRL			0x10
+#define KEY_R_SHIFT			0x20
+#define KEY_R_ALT			0x40
+#define KEY_R_WIN			0x80
 
 // Local Variables
 uint8_t last_keypad_reading;  // This is to hold last status of the keypad so that we only report if it changes
@@ -100,10 +109,19 @@ void PrepareTxBuffer(uint8_t keypad_reading)
         {
             if ( (keypad_reading & button_key_maps[i].button) > 0)
             {
-                HIDTxBuffer[index++] = button_key_maps[i].key;
-                if (index > max_buttons)
+                uint16_t key = button_key_maps[i].key;
+                
+                if (key == KEY_RIGHTSHIFT)
                 {
-                    break;
+                    HIDTxBuffer[0] = KEY_R_SHIFT;
+                }
+                else
+                {
+                    HIDTxBuffer[index++] = key;
+                    if (index > max_buttons)
+                    {
+                        break;
+                    }
                 }
             }
             i++;
@@ -115,7 +133,7 @@ void PrepareTxBuffer(uint8_t keypad_reading)
     }
 }
 
-void ProcessIncommingData(void)
+void ProcessIncomingData(void)
 {
     // Windows Will send only a single Byte
     // with statuses of leds
@@ -129,7 +147,7 @@ static void CheckUsb(void)
 {
     if(IsUsbDataAvaialble(HidInterfaceNumber) > 0 )
     {
-        ProcessIncommingData();
+        ProcessIncomingData();
         ReArmInterface(HidInterfaceNumber);
     }
 }

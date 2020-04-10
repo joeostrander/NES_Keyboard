@@ -7,7 +7,7 @@
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "Source/Main.c" 2
-# 18 "Source/Main.c"
+# 17 "Source/Main.c"
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\htc.h" 1 3
 
 
@@ -3716,7 +3716,7 @@ extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 27 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 2 3
 # 4 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\htc.h" 2 3
-# 18 "Source/Main.c" 2
+# 17 "Source/Main.c" 2
 
 # 1 "Source/Usb.h" 1
 # 53 "Source/Usb.h"
@@ -3959,11 +3959,11 @@ const uint8_t HIDReport[] = {
 
 const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[1];}StringDescriptor0={sizeof(StringDescriptor0),0x03,{0x0409}};
 
-const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[11];}StringDescriptor1={sizeof(StringDescriptor1),0x03,
-{'D','I','Y',' ','D','e','v','i','c','e','s'}};
+const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[13];}StringDescriptor1={sizeof(StringDescriptor1),0x03,
+{'J','o','e',' ','O','s','t','r','a','n','d','e','r'}};
 
-const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[20];}StringDescriptor2={sizeof(StringDescriptor2),0x03,
-{'1','6','F','1','4','5','5',' ','H','I','D',' ','K','e','y','b','o','a','r','d'}};
+const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[12];}StringDescriptor2={sizeof(StringDescriptor2),0x03,
+{'N','E','S',' ','K','e','y','b','o','a','r','d'}};
 
 
 const uint8_t *const StringDescriptorPointers[0x03]=
@@ -3985,7 +3985,7 @@ void HIDSend(uint8_t InterfaceNo);
 void ProcessUSBTransactions(void);
 void ReArmInterface(uint8_t InterfaceNo);
 uint8_t IsUsbDataAvaialble(uint8_t InterfaceNo);
-# 19 "Source/Main.c" 2
+# 18 "Source/Main.c" 2
 
 # 1 "Source/nes_keyboard.h" 1
 
@@ -4002,9 +4002,9 @@ struct KEYMAP
 
 struct KEYMAP button_key_maps[] =
 {
-    { (1<<0), 0x04 },
-    { (1<<1), 0x05 },
-    { (1<<2), 0x29 },
+    { (1<<0), 0x1b },
+    { (1<<1), 0x1d },
+    { (1<<2), 0xe5 },
     { (1<<3), 0x28 },
     { (1<<4), 0x52 },
     { (1<<5), 0x51 },
@@ -4016,7 +4016,7 @@ struct KEYMAP button_key_maps[] =
 
 void NES_GPIO_Initialize();
 uint8_t NES_read_pad();
-# 20 "Source/Main.c" 2
+# 19 "Source/Main.c" 2
 
 
 
@@ -4040,13 +4040,7 @@ uint8_t NES_read_pad();
 #pragma config BORV = LO
 #pragma config LPBOR = OFF
 #pragma config LVP = OFF
-
-
-
-
-
-
-
+# 59 "Source/Main.c"
 uint8_t last_keypad_reading;
 
 
@@ -4100,11 +4094,25 @@ void PrepareTxBuffer(uint8_t keypad_reading)
         {
             if ( (keypad_reading & button_key_maps[i].button) > 0)
             {
-                HIDTxBuffer[index++] = button_key_maps[i].key;
-                if (index > max_buttons)
+                uint16_t key = button_key_maps[i].key;
+
+                if (key == 0xe5)
                 {
-                    break;
+                    HIDTxBuffer[0] = 0x20;
+
                 }
+                else
+                {
+
+
+                    HIDTxBuffer[index++] = key;
+                    if (index > max_buttons)
+                    {
+                        break;
+                    }
+                }
+
+
             }
             i++;
         }

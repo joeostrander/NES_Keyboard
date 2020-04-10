@@ -8,21 +8,32 @@
 #define _XTAL_FREQ 48000000L
 
 #define DATA_Get()      (PORTCbits.RC3 & 0x1)
-#define CLK_Set()       do { LATCbits.LATC4 = 1; } while(0)
-#define CLK_Clear()     do { LATCbits.LATC4 = 0; } while(0)
-#define LATCH_Set()     do { LATCbits.LATC5 = 1; } while(0)
-#define LATCH_Clear()   do { LATCbits.LATC5 = 0; } while(0)
+#define CLK_Set()       do { LATCbits.LATC5 = 1; } while(0)
+#define CLK_Clear()     do { LATCbits.LATC5 = 0; } while(0)
+#define LATCH_Set()     do { LATCbits.LATC4 = 1; } while(0)
+#define LATCH_Clear()   do { LATCbits.LATC4 = 0; } while(0)
+// note:  v1 pcb had latch and clock on swapped pins!
 
 /*
-    keyboard mapping:
-    B = B
-    A = A
-    Enter = Start
-    ESC = Select
-    Keypad up = Up
-    Keypad left = Left
-    Keypad down = Down
-    Keypad right = Right
+    keyboard mapping (match retroarch default):
+    B = z
+    A = x
+    Start = Enter
+    Select = RShift
+    Up = UP arrow
+    Left = LEFT arrow
+    Down = DOWN arrow
+    Right = RIGHT arrow
+ 
+    OLD V1 keyboard mapping:
+    B = b
+    A = a
+    Start = Enter
+    Select = ESC
+    Up = UP arrow
+    Left = LEFT arrow
+    Down = DOWN arrow
+    Right = RIGHT arrow
 */
 
 

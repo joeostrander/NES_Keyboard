@@ -3690,9 +3690,9 @@ struct KEYMAP
 
 struct KEYMAP button_key_maps[] =
 {
-    { (1<<0), 0x04 },
-    { (1<<1), 0x05 },
-    { (1<<2), 0x29 },
+    { (1<<0), 0x1b },
+    { (1<<1), 0x1d },
+    { (1<<2), 0xe5 },
     { (1<<3), 0x28 },
     { (1<<4), 0x52 },
     { (1<<5), 0x51 },
@@ -3849,7 +3849,7 @@ extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 27 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 2 3
 # 6 "Source/nes_keyboard.c" 2
-# 29 "Source/nes_keyboard.c"
+# 40 "Source/nes_keyboard.c"
 uint8_t last_reading = 0;
 
 void NES_GPIO_Initialize()
@@ -3865,10 +3865,10 @@ void NES_GPIO_Initialize()
 
 uint8_t NES_read_pad()
 {
-# 63 "Source/nes_keyboard.c"
-  do { LATCbits.LATC5 = 1; } while(0);
+# 74 "Source/nes_keyboard.c"
+  do { LATCbits.LATC4 = 1; } while(0);
   _delay((unsigned long)((12)*(48000000L/4000000.0)));
-  do { LATCbits.LATC5 = 0; } while(0);
+  do { LATCbits.LATC4 = 0; } while(0);
 
 
 
@@ -3877,9 +3877,9 @@ uint8_t NES_read_pad()
   for ( i = 0; i < 8; i++)
   {
       output |= !( (PORTCbits.RC3 & 0x1)) << i;
-      do { LATCbits.LATC4 = 1; } while(0);
+      do { LATCbits.LATC5 = 1; } while(0);
       _delay((unsigned long)((6)*(48000000L/4000000.0)));
-      do { LATCbits.LATC4 = 0; } while(0);
+      do { LATCbits.LATC5 = 0; } while(0);
       _delay((unsigned long)((6)*(48000000L/4000000.0)));
   }
 

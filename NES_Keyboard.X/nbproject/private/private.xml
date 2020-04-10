@@ -3,6 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/1"/>
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/qojmo2/Google%20Drive/DEV/PIC/NES_Keyboard/NES_Keyboard.X/Source/nes_keyboard.h</file>
+            <file>file:/C:/Users/qojmo2/Google%20Drive/DEV/PIC/NES_Keyboard/NES_Keyboard.X/Source/usb_hid_keys.h</file>
+            <file>file:/C:/Users/qojmo2/Google%20Drive/DEV/PIC/NES_Keyboard/NES_Keyboard.X/Source/nes_keyboard.c</file>
+            <file>file:/C:/Users/qojmo2/Google%20Drive/DEV/PIC/NES_Keyboard/NES_Keyboard.X/Source/Main.c</file>
+            <file>file:/C:/Users/qojmo2/Google%20Drive/DEV/PIC/NES_Keyboard/NES_Keyboard.X/Source/UsbDescriptors.h</file>
+        </group>
     </open-files>
 </project-private>

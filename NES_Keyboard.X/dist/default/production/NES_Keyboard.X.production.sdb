@@ -10,27 +10,27 @@
 [v i1___bmul __bmul `(uc  1 e 1 0 ]
 "4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul8_16.c
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
-"53 C:\Users\qojmo2\Downloads\16F1455Keyboard\NES_Keyboard.X\Source/Main.c
+"62 C:\Users\qojmo2\Google Drive\DEV\PIC\NES_Keyboard\NES_Keyboard.X\Source/Main.c
 [v _ISRCode ISRCode `II(v  1 e 1 0 ]
-"58
+"67
 [v _InitializeSystem InitializeSystem `(v  1 s 1 InitializeSystem ]
-"71
+"80
 [v _EnableInterrupts EnableInterrupts `(v  1 s 1 EnableInterrupts ]
-"79
+"88
 [v _PrepareTxBuffer PrepareTxBuffer `(v  1 e 1 0 ]
-"118
+"141
 [v _ProcessIncommingData ProcessIncommingData `(v  1 e 1 0 ]
-"128
+"151
 [v _CheckUsb CheckUsb `(v  1 s 1 CheckUsb ]
-"137
+"160
 [v _ProcessIO ProcessIO `(v  1 e 1 0 ]
-"154
+"177
 [v _main main `(v  1 e 1 0 ]
-"31 C:\Users\qojmo2\Downloads\16F1455Keyboard\NES_Keyboard.X\Source/nes_keyboard.c
+"42 C:\Users\qojmo2\Google Drive\DEV\PIC\NES_Keyboard\NES_Keyboard.X\Source/nes_keyboard.c
 [v _NES_GPIO_Initialize NES_GPIO_Initialize `(v  1 e 1 0 ]
-"42
+"53
 [v _NES_read_pad NES_read_pad `(uc  1 e 1 0 ]
-"186 C:\Users\qojmo2\Downloads\16F1455Keyboard\NES_Keyboard.X\Source/Usb.c
+"186 C:\Users\qojmo2\Google Drive\DEV\PIC\NES_Keyboard\NES_Keyboard.X\Source/Usb.c
 [v _IsUsbDataAvaialble IsUsbDataAvaialble `(uc  1 e 1 0 ]
 "196
 [v _ReArmInterface ReArmInterface `(v  1 e 1 0 ]
@@ -103,7 +103,7 @@
 "444
 [u S136 . 1 `S129 1 . 1 0 ]
 [v _PORTAbits PORTAbits `VES136  1 e 1 @12 ]
-[s S642 . 1 `uc 1 RC0 1 0 :1:0 
+[s S643 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 RC3 1 0 :1:3 
@@ -111,8 +111,8 @@
 `uc 1 RC5 1 0 :1:5 
 ]
 "489
-[u S649 . 1 `S642 1 . 1 0 ]
-[v _PORTCbits PORTCbits `VES649  1 e 1 @14 ]
+[u S650 . 1 `S643 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES650  1 e 1 @14 ]
 [s S43 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 ACTIF 1 0 :1:1 
 `uc 1 USBIF 1 0 :1:2 
@@ -125,14 +125,14 @@
 "598
 [u S52 . 1 `S43 1 . 1 0 ]
 [v _PIR2bits PIR2bits `VES52  1 e 1 @18 ]
-[s S608 . 1 `uc 1 . 1 0 :4:0 
+[s S609 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 TRISA4 1 0 :1:4 
 `uc 1 TRISA5 1 0 :1:5 
 ]
 "965
-[u S612 . 1 `S608 1 . 1 0 ]
-[v _TRISAbits TRISAbits `VES612  1 e 1 @140 ]
-[s S577 . 1 `uc 1 TRISC0 1 0 :1:0 
+[u S613 . 1 `S609 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES613  1 e 1 @140 ]
+[s S578 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 TRISC3 1 0 :1:3 
@@ -140,8 +140,8 @@
 `uc 1 TRISC5 1 0 :1:5 
 ]
 "995
-[u S584 . 1 `S577 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES584  1 e 1 @142 ]
+[u S585 . 1 `S578 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES585  1 e 1 @142 ]
 [s S108 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 ACTIE 1 0 :1:1 
 `uc 1 USBIE 1 0 :1:2 
@@ -162,7 +162,7 @@
 [v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
 "1791
 [v _LATC LATC `VEuc  1 e 1 @270 ]
-[s S619 . 1 `uc 1 LATC0 1 0 :1:0 
+[s S620 . 1 `uc 1 LATC0 1 0 :1:0 
 `uc 1 LATC1 1 0 :1:1 
 `uc 1 LATC2 1 0 :1:2 
 `uc 1 LATC3 1 0 :1:3 
@@ -170,30 +170,30 @@
 `uc 1 LATC5 1 0 :1:5 
 ]
 "1806
-[u S626 . 1 `S619 1 . 1 0 ]
-[v _LATCbits LATCbits `VES626  1 e 1 @270 ]
+[u S627 . 1 `S620 1 . 1 0 ]
+[v _LATCbits LATCbits `VES627  1 e 1 @270 ]
 "2387
 [v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
-[s S594 . 1 `uc 1 . 1 0 :4:0 
+[s S595 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 ANSA4 1 0 :1:4 
 ]
 "2401
-[s S597 . 1 `uc 1 ANSELA 1 0 :6:0 
+[s S598 . 1 `uc 1 ANSELA 1 0 :6:0 
 ]
-[u S599 . 1 `S594 1 . 1 0 `S597 1 . 1 0 ]
-[v _ANSELAbits ANSELAbits `VES599  1 e 1 @396 ]
+[u S600 . 1 `S595 1 . 1 0 `S598 1 . 1 0 ]
+[v _ANSELAbits ANSELAbits `VES600  1 e 1 @396 ]
 "2416
 [v _ANSELC ANSELC `VEuc  1 e 1 @398 ]
-[s S559 . 1 `uc 1 ANSC0 1 0 :1:0 
+[s S560 . 1 `uc 1 ANSC0 1 0 :1:0 
 `uc 1 ANSC1 1 0 :1:1 
 `uc 1 ANSC2 1 0 :1:2 
 `uc 1 ANSC3 1 0 :1:3 
 ]
 "2432
-[s S564 . 1 `uc 1 ANSELC 1 0 :8:0 
+[s S565 . 1 `uc 1 ANSELC 1 0 :8:0 
 ]
-[u S566 . 1 `S559 1 . 1 0 `S564 1 . 1 0 ]
-[v _ANSELCbits ANSELCbits `VES566  1 e 1 @398 ]
+[u S567 . 1 `S560 1 . 1 0 `S565 1 . 1 0 ]
+[v _ANSELCbits ANSELCbits `VES567  1 e 1 @398 ]
 "3928
 [v _ACTCON ACTCON `VEuc  1 e 1 @923 ]
 "4631
@@ -213,7 +213,7 @@
 [v _USTAT USTAT `VEuc  1 e 1 @3727 ]
 "4742
 [v _UIR UIR `VEuc  1 e 1 @3728 ]
-[s S363 . 1 `uc 1 URSTIF 1 0 :1:0 
+[s S364 . 1 `uc 1 URSTIF 1 0 :1:0 
 `uc 1 UERRIF 1 0 :1:1 
 `uc 1 ACTVIF 1 0 :1:2 
 `uc 1 TRNIF 1 0 :1:3 
@@ -222,13 +222,13 @@
 `uc 1 SOFIF 1 0 :1:6 
 ]
 "4758
-[u S371 . 1 `S363 1 . 1 0 ]
-[v _UIRbits UIRbits `VES371  1 e 1 @3728 ]
+[u S372 . 1 `S364 1 . 1 0 ]
+[v _UIRbits UIRbits `VES372  1 e 1 @3728 ]
 "4798
 [v _UCFG UCFG `VEuc  1 e 1 @3729 ]
 "4852
 [v _UIE UIE `VEuc  1 e 1 @3730 ]
-[s S344 . 1 `uc 1 URSTIE 1 0 :1:0 
+[s S345 . 1 `uc 1 URSTIE 1 0 :1:0 
 `uc 1 UERRIE 1 0 :1:1 
 `uc 1 ACTVIE 1 0 :1:2 
 `uc 1 TRNIE 1 0 :1:3 
@@ -237,8 +237,8 @@
 `uc 1 SOFIE 1 0 :1:6 
 ]
 "4868
-[u S352 . 1 `S344 1 . 1 0 ]
-[v _UIEbits UIEbits `VES352  1 e 1 @3730 ]
+[u S353 . 1 `S345 1 . 1 0 ]
+[v _UIEbits UIEbits `VES353  1 e 1 @3730 ]
 "4908
 [v _UEIR UEIR `VEuc  1 e 1 @3731 ]
 "5060
@@ -247,21 +247,21 @@
 [v _UEIE UEIE `VEuc  1 e 1 @3735 ]
 "5167
 [v _UEP0 UEP0 `VEuc  1 e 1 @3736 ]
-[s S382 . 1 `uc 1 EPSTALL 1 0 :1:0 
+[s S383 . 1 `uc 1 EPSTALL 1 0 :1:0 
 `uc 1 EPINEN 1 0 :1:1 
 `uc 1 EPOUTEN 1 0 :1:2 
 `uc 1 EPCONDIS 1 0 :1:3 
 `uc 1 EPHSHK 1 0 :1:4 
 ]
 "5181
-[u S388 . 1 `S382 1 . 1 0 ]
-[v _UEP0bits UEP0bits `VES388  1 e 1 @3736 ]
-"50 C:\Users\qojmo2\Downloads\16F1455Keyboard\NES_Keyboard.X\Source/Main.c
+[u S389 . 1 `S383 1 . 1 0 ]
+[v _UEP0bits UEP0bits `VES389  1 e 1 @3736 ]
+"59 C:\Users\qojmo2\Google Drive\DEV\PIC\NES_Keyboard\NES_Keyboard.X\Source/Main.c
 [v _last_keypad_reading last_keypad_reading `uc  1 e 1 0 ]
 [s S40 KEYMAP 3 `uc 1 button 1 0 `us 1 key 2 1 ]
-"21 C:\Users\qojmo2\Downloads\16F1455Keyboard\NES_Keyboard.X\Source/nes_keyboard.h
+"21 C:\Users\qojmo2\Google Drive\DEV\PIC\NES_Keyboard\NES_Keyboard.X\Source/nes_keyboard.h
 [v _button_key_maps button_key_maps `[9]S40  1 e 27 0 ]
-"153 C:\Users\qojmo2\Downloads\16F1455Keyboard\NES_Keyboard.X\Source/Usb.c
+"153 C:\Users\qojmo2\Google Drive\DEV\PIC\NES_Keyboard\NES_Keyboard.X\Source/Usb.c
 [v _RemoteWakeup RemoteWakeup `uc  1 e 1 0 ]
 "154
 [v _DeviceAddress DeviceAddress `uc  1 e 1 0 ]
@@ -291,20 +291,20 @@
 [v _transferType transferType `uc  1 e 1 0 ]
 "169
 [v _wCount wCount `us  1 e 2 0 ]
-[s S310 _setupPacketStruct 9 `uc 1 bmRequestType 1 0 `uc 1 bRequest 1 1 `uc 1 wValue0 1 2 `uc 1 wValue1 1 3 `uc 1 wIndex0 1 4 `uc 1 wIndex1 1 5 `us 1 wLength 2 6 `[1]uc 1 extra 1 8 ]
+[s S311 _setupPacketStruct 9 `uc 1 bmRequestType 1 0 `uc 1 bRequest 1 1 `uc 1 wValue0 1 2 `uc 1 wValue1 1 3 `uc 1 wIndex0 1 4 `uc 1 wIndex1 1 5 `us 1 wLength 2 6 `[1]uc 1 extra 1 8 ]
 "171
-[v _SetupPacket SetupPacket `VES310  1 e 9 0 ]
+[v _SetupPacket SetupPacket `VES311  1 e 9 0 ]
 "172
 [v _ControlTransferBuffer ControlTransferBuffer `VE[8]uc  1 e 8 0 ]
 "174
 [v _EndpointFlags EndpointFlags `VE[1]uc  1 e 1 @3737 ]
-[s S319 _BDT 4 `uc 1 Stat 1 0 `uc 1 Cnt 1 1 `us 1 ADDR 2 2 ]
+[s S320 _BDT 4 `uc 1 Stat 1 0 `uc 1 Cnt 1 1 `us 1 ADDR 2 2 ]
 "179
-[s S323 _Interface 8 `S319 1 Output 4 0 `S319 1 Input 4 4 ]
-[v _Interfaces Interfaces `VE[2]S323  1 e 16 @32 ]
-"66 C:\Users\qojmo2\Downloads\16F1455Keyboard\NES_Keyboard.X\Source/Usb.h
+[s S324 _Interface 8 `S320 1 Output 4 0 `S320 1 Input 4 4 ]
+[v _Interfaces Interfaces `VE[2]S324  1 e 16 @32 ]
+"66 C:\Users\qojmo2\Google Drive\DEV\PIC\NES_Keyboard\NES_Keyboard.X\Source/Usb.h
 [v _DeviceState DeviceState `uc  1 e 1 0 ]
-"38 C:\Users\qojmo2\Downloads\16F1455Keyboard\NES_Keyboard.X\Source/UsbDescriptors.h
+"38 C:\Users\qojmo2\Google Drive\DEV\PIC\NES_Keyboard\NES_Keyboard.X\Source/UsbDescriptors.h
 [v _HIDRxBuffer HIDRxBuffer `VE[8]uc  1 e 8 0 ]
 "39
 [v _HIDTxBuffer HIDTxBuffer `VE[8]uc  1 e 8 0 ]
@@ -321,43 +321,45 @@
 [s S28 . 4 `uc 1 bLength 1 0 `uc 1 bDscType 1 1 `[1]us 1 string 2 2 ]
 "178
 [v _StringDescriptor0 StringDescriptor0 `DCS28  1 e 4 0 ]
-[s S32 . 24 `uc 1 bLength 1 0 `uc 1 bDscType 1 1 `[11]us 1 string 22 2 ]
+[s S32 . 28 `uc 1 bLength 1 0 `uc 1 bDscType 1 1 `[13]us 1 string 26 2 ]
 "180
-[v _StringDescriptor1 StringDescriptor1 `DCS32  1 e 24 0 ]
-[s S36 . 42 `uc 1 bLength 1 0 `uc 1 bDscType 1 1 `[20]us 1 string 40 2 ]
+[v _StringDescriptor1 StringDescriptor1 `DCS32  1 e 28 0 ]
+[s S36 . 26 `uc 1 bLength 1 0 `uc 1 bDscType 1 1 `[12]us 1 string 24 2 ]
 "183
-[v _StringDescriptor2 StringDescriptor2 `DCS36  1 e 42 0 ]
+[v _StringDescriptor2 StringDescriptor2 `DCS36  1 e 26 0 ]
 "187
 [v _StringDescriptorPointers StringDescriptorPointers `DC[3]*.25DCuc  1 e 6 0 ]
-"154 C:\Users\qojmo2\Downloads\16F1455Keyboard\NES_Keyboard.X\Source/Main.c
+"177 C:\Users\qojmo2\Google Drive\DEV\PIC\NES_Keyboard\NES_Keyboard.X\Source/Main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"163
+"186
 } 0
-"137
+"160
 [v _ProcessIO ProcessIO `(v  1 e 1 0 ]
 {
-"143
-[v ProcessIO@reading reading `uc  1 a 1 12 ]
-"152
+"166
+[v ProcessIO@reading reading `uc  1 a 1 13 ]
+"175
 } 0
-"79
+"88
 [v _PrepareTxBuffer PrepareTxBuffer `(v  1 e 1 0 ]
 {
 [v PrepareTxBuffer@keypad_reading keypad_reading `uc  1 a 1 wreg ]
-"95
-[v PrepareTxBuffer@i i `uc  1 a 1 10 ]
-"96
-[v PrepareTxBuffer@index index `uc  1 a 1 8 ]
-"98
-[v PrepareTxBuffer@max_buttons max_buttons `uc  1 a 1 6 ]
-"82
-[v PrepareTxBuffer@n n `uc  1 a 1 9 ]
-"79
+"112
+[v PrepareTxBuffer@key key `us  1 a 2 6 ]
+"104
+[v PrepareTxBuffer@i i `uc  1 a 1 11 ]
+"105
+[v PrepareTxBuffer@index index `uc  1 a 1 9 ]
+"107
+[v PrepareTxBuffer@max_buttons max_buttons `uc  1 a 1 5 ]
+"91
+[v PrepareTxBuffer@n n `uc  1 a 1 10 ]
+"88
 [v PrepareTxBuffer@keypad_reading keypad_reading `uc  1 a 1 wreg ]
-"85
-[v PrepareTxBuffer@keypad_reading keypad_reading `uc  1 a 1 7 ]
-"116
+"94
+[v PrepareTxBuffer@keypad_reading keypad_reading `uc  1 a 1 8 ]
+"139
 } 0
 "4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul8.c
 [v ___bmul __bmul `(uc  1 e 1 0 ]
@@ -372,16 +374,16 @@
 [v ___bmul@multiplier multiplier `uc  1 a 1 3 ]
 "51
 } 0
-"42 C:\Users\qojmo2\Downloads\16F1455Keyboard\NES_Keyboard.X\Source/nes_keyboard.c
+"53 C:\Users\qojmo2\Google Drive\DEV\PIC\NES_Keyboard\NES_Keyboard.X\Source/nes_keyboard.c
 [v _NES_read_pad NES_read_pad `(uc  1 e 1 0 ]
 {
-"70
-[v NES_read_pad@i i `i  1 a 2 3 ]
-"69
-[v NES_read_pad@output output `uc  1 a 1 2 ]
 "81
+[v NES_read_pad@i i `i  1 a 2 3 ]
+"80
+[v NES_read_pad@output output `uc  1 a 1 2 ]
+"92
 } 0
-"216 C:\Users\qojmo2\Downloads\16F1455Keyboard\NES_Keyboard.X\Source/Usb.c
+"216 C:\Users\qojmo2\Google Drive\DEV\PIC\NES_Keyboard\NES_Keyboard.X\Source/Usb.c
 [v _HIDSend HIDSend `(v  1 e 1 0 ]
 {
 [v HIDSend@InterfaceNo InterfaceNo `uc  1 a 1 wreg ]
@@ -390,12 +392,12 @@
 [v HIDSend@InterfaceNo InterfaceNo `uc  1 a 1 3 ]
 "229
 } 0
-"128 C:\Users\qojmo2\Downloads\16F1455Keyboard\NES_Keyboard.X\Source/Main.c
+"151 C:\Users\qojmo2\Google Drive\DEV\PIC\NES_Keyboard\NES_Keyboard.X\Source/Main.c
 [v _CheckUsb CheckUsb `(v  1 s 1 CheckUsb ]
 {
-"135
+"158
 } 0
-"196 C:\Users\qojmo2\Downloads\16F1455Keyboard\NES_Keyboard.X\Source/Usb.c
+"196 C:\Users\qojmo2\Google Drive\DEV\PIC\NES_Keyboard\NES_Keyboard.X\Source/Usb.c
 [v _ReArmInterface ReArmInterface `(v  1 e 1 0 ]
 {
 [v ReArmInterface@InterfaceNo InterfaceNo `uc  1 a 1 wreg ]
@@ -404,12 +406,12 @@
 [v ReArmInterface@InterfaceNo InterfaceNo `uc  1 a 1 3 ]
 "214
 } 0
-"118 C:\Users\qojmo2\Downloads\16F1455Keyboard\NES_Keyboard.X\Source/Main.c
+"141 C:\Users\qojmo2\Google Drive\DEV\PIC\NES_Keyboard\NES_Keyboard.X\Source/Main.c
 [v _ProcessIncommingData ProcessIncommingData `(v  1 e 1 0 ]
 {
-"126
+"149
 } 0
-"186 C:\Users\qojmo2\Downloads\16F1455Keyboard\NES_Keyboard.X\Source/Usb.c
+"186 C:\Users\qojmo2\Google Drive\DEV\PIC\NES_Keyboard\NES_Keyboard.X\Source/Usb.c
 [v _IsUsbDataAvaialble IsUsbDataAvaialble `(uc  1 e 1 0 ]
 {
 [v IsUsbDataAvaialble@InterfaceNo InterfaceNo `uc  1 a 1 wreg ]
@@ -418,12 +420,12 @@
 [v IsUsbDataAvaialble@InterfaceNo InterfaceNo `uc  1 a 1 1 ]
 "194
 } 0
-"31 C:\Users\qojmo2\Downloads\16F1455Keyboard\NES_Keyboard.X\Source/nes_keyboard.c
+"42 C:\Users\qojmo2\Google Drive\DEV\PIC\NES_Keyboard\NES_Keyboard.X\Source/nes_keyboard.c
 [v _NES_GPIO_Initialize NES_GPIO_Initialize `(v  1 e 1 0 ]
 {
-"40
+"51
 } 0
-"762 C:\Users\qojmo2\Downloads\16F1455Keyboard\NES_Keyboard.X\Source/Usb.c
+"762 C:\Users\qojmo2\Google Drive\DEV\PIC\NES_Keyboard\NES_Keyboard.X\Source/Usb.c
 [v _InitializeUSB InitializeUSB `(v  1 e 1 0 ]
 {
 "772
@@ -433,27 +435,27 @@
 {
 "760
 } 0
-"58 C:\Users\qojmo2\Downloads\16F1455Keyboard\NES_Keyboard.X\Source/Main.c
+"67 C:\Users\qojmo2\Google Drive\DEV\PIC\NES_Keyboard\NES_Keyboard.X\Source/Main.c
 [v _InitializeSystem InitializeSystem `(v  1 s 1 InitializeSystem ]
 {
-"69
+"78
 } 0
-"774 C:\Users\qojmo2\Downloads\16F1455Keyboard\NES_Keyboard.X\Source/Usb.c
+"774 C:\Users\qojmo2\Google Drive\DEV\PIC\NES_Keyboard\NES_Keyboard.X\Source/Usb.c
 [v _EnableUSBModule EnableUSBModule `(v  1 e 1 0 ]
 {
 "795
 } 0
-"71 C:\Users\qojmo2\Downloads\16F1455Keyboard\NES_Keyboard.X\Source/Main.c
+"80 C:\Users\qojmo2\Google Drive\DEV\PIC\NES_Keyboard\NES_Keyboard.X\Source/Main.c
 [v _EnableInterrupts EnableInterrupts `(v  1 s 1 EnableInterrupts ]
 {
-"77
+"86
 } 0
-"53
+"62
 [v _ISRCode ISRCode `II(v  1 e 1 0 ]
 {
-"56
+"65
 } 0
-"860 C:\Users\qojmo2\Downloads\16F1455Keyboard\NES_Keyboard.X\Source/Usb.c
+"860 C:\Users\qojmo2\Google Drive\DEV\PIC\NES_Keyboard\NES_Keyboard.X\Source/Usb.c
 [v _ProcessUSBTransactions ProcessUSBTransactions `(v  1 e 1 0 ]
 {
 "936
